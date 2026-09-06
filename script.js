@@ -1,6 +1,6 @@
-// Tarot Deck 78 Cards (Major Arcana 22 + Minor Arcana 56)
+// Tarot Deck 78 Cards (Reliable Image Links)
 const tarotDeck = [
-    // --- MAJOR ARCANA (22 Cards) ---
+    // --- MAJOR ARCANA (22) ---
     { name: "0. The Fool", upright: "အစသစ်၊ လွတ်လပ်မှု၊ စွန့်စားမှု", reversed: "ပေါ့ဆမှု၊ စွန့်စားလွန်းခြင်း", advice: "သတိထားပြီး သေချာစဉ်းစားလုပ်ဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg" },
     { name: "I. The Magician", upright: "စွမ်းရည်၊ ဖန်တီးမှု၊ အခွင့်အလမ်း", reversed: "လှည့်ဖြားခံရခြင်း၊ ယုံကြည်မှုနည်းခြင်း", advice: "မိမိစွမ်းရည်ကို ယုံကြည်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg" },
     { name: "II. The High Priestess", upright: "ပင်ကိုအသိ၊ လျှို့ဝှက်ချက်", reversed: "စိတ်ရှုပ်ထွေးခြင်း၊ သံသယရှိခြင်း", advice: "စိတ်အေးအေးထားပြီး ပင်ကိုအသိကို အားကိုးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg" },
@@ -24,72 +24,71 @@ const tarotDeck = [
     { name: "XX. Judgement", upright: "ဆုံးဖြတ်ချက်၊ သတင်းကောင်း၊ ပြန်လည်နိုးထခြင်း", reversed: "နောင်တရခြင်း၊ မိမိကိုယ်ကို သံသယဖြစ်ခြင်း", advice: "အတိတ်ကို ထားခဲ့ပြီး ဆုံးဖြတ်ချက်မှန်မှန် ချပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg" },
     { name: "XXI. The World", upright: "ပြည့်စုံခြင်း၊ အောင်မြင်စွာ ပြီးမြောက်ခြင်း", reversed: "မပြီးဆုံးသေးခြင်း၊ အဟန့်အတားရှိခြင်း", advice: "ကြိုးစားမှုကို အဆုံးထိ လက်မလျှော့ပါနဲ့", image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg" },
 
-    // --- MINOR ARCANA: WANDS (14 Cards) ---
-    { name: "Ace of Wands", upright: "စိတ်ကူးသစ်၊ စတင်မှု၊ တက်ကြွမှု", reversed: "ကြန့်ကြာမှု၊ စိတ်အားထက်သန်မှုနည်းခြင်း", advice: "အခွင့်အလမ်းသစ်ကို အမြန်ဆုပ်ကိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg" },
-    { name: "Two of Wands", upright: "အနာဂတ်အစီအစဉ်၊ ဆုံးဖြတ်ချက်", reversed: "ကြောက်ရွံ့ခြင်း၊ အစီအစဉ်မရှိခြင်း", advice: "ရည်မှန်းချက်ကြီးကြီး ထားရှိပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg" },
-    { name: "Three of Wands", upright: "တိုးတက်မှု၊ မျှော်လင့်ချက်၊ ခရီးစဉ်", reversed: "အဟန့်အတား၊ မျှော်လင့်သလိုမဖြစ်ခြင်း", advice: "ရေရှည်ကြည့်၍ ပြင်ဆင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/ff/ff/Wands03.jpg" },
-    { name: "Four of Wands", upright: "အောင်ပွဲ၊ မင်္ဂလာသတင်း၊ တည်ငြိမ်မှု", reversed: "အိမ်တွင်း မငြိမ်းချမ်းမှု၊ မတည်ငြိမ်မှု", advice: "အောင်မြင်မှုကို အတူတကွ အောင်ပွဲခံပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg" },
-    { name: "Five of Wands", upright: "ပြိုင်ဆိုင်မှု၊ ပဋိပက္ခ၊ သဘောထားကွဲခြင်း", reversed: "ပဋိပက္ခ ပြီးဆုံးခြင်း၊ ညှိနှိုင်းရရှိခြင်း", advice: "စိတ်အေးအေးထားပြီး ညှိနှိုင်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg" },
-    { name: "Six of Wands", upright: "အောင်မြင်မှု၊ အသိအမှတ်ပြုခံရခြင်း", reversed: "ကျရှုံးမှု၊ ဂုဏ်သိက္ခာထိခိုက်ခြင်း", advice: "ကြိုးစားမှုကို ဆက်လက်ထိန်းသိမ်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg" },
-    { name: "Seven of Wands", upright: "ကာကွယ်ခြင်း၊ စိန်ခေါ်မှုကို ရင်ဆိုင်ခြင်း", reversed: "လက်လျှော့ခြင်း၊ ဖိအားများခြင်း", advice: "မိမိရပ်တည်ချက်ကို ခိုင်ခိုင်မာမာ ဆုပ်ကိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg" },
-    { name: "Eight of Wands", upright: "မြန်ဆန်သော တိုးတက်မှု၊ သတင်းကောင်း", reversed: "ကြန့်ကြာမှု၊ အမှားအယွင်းဖြစ်ခြင်း", advice: "အမြန်ဆုံး မဆိုင်းမတွ လုပ်ဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg" },
-    { name: "Nine of Wands", upright: "ကြံ့ခိုင်မှု၊ အဆုံးသတ် စိန်ခေါ်မှု", reversed: "ပင်ပန်းနွမ်းနယ်ခြင်း၊ စိတ်ဓာတ်ကျခြင်း", advice: "အဆုံးအထိ ဇွဲမလျှော့ဘဲ ကြိုးစားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Wands09.jpg" },
-    { name: "Ten of Wands", upright: "ဝန်ထုပ်ဝန်ပိုး၊ စိတ်ဖိစီးမှု extreme", reversed: "ဝန်ထုတ်ဝန်ပိုး လျှော့ချခြင်း", advice: "တာဝန်များကို ခွဲဝေယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg" },
-    { name: "Page of Wands", upright: "သတင်းကောင်း၊ အကွက်သစ်၊ သင်ယူမှု", reversed: "သတင်းဆိုး၊ စိတ်အားထက်သန်မှုမရှိခြင်း", advice: "စိတ်ကူးသစ်များကို စမ်းသပ်ကြည့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg" },
-    { name: "Knight of Wands", upright: "တက်ကြွစွာ ဆောင်ရွက်ခြင်း၊ ခရီးစဉ်", reversed: "စိတ်တိုလွယ်ခြင်း၊ မဆင်မခြင်လုပ်ခြင်း", advice: "ရည်မှန်းချက်ဆီ မြန်မြန်ဆန်ဆန် သွားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg" },
-    { name: "Queen of Wands", upright: "ယုံကြည်မှု၊ ဆွဲဆောင်မှု၊ ရဲရင့်မှု", reversed: "မနာလိုခြင်း၊ စိတ်တိုလွယ်ခြင်း", advice: "မိမိကိုယ်ကို ယုံကြည်မှု အပြည့်ထားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg" },
-    { name: "King of Wands", upright: "ခေါင်းဆောင်မှု၊ ကြီးမားသော အောင်မြင်မှု", reversed: "အာဏာရှင်ဆန်ခြင်း၊ အလျင်စလိုဖြစ်ခြင်း", advice: "ခေါင်းဆောင်ကောင်းပီသစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg" },
+    // --- MINOR ARCANA: WANDS ---
+    { name: "Ace of Wands", upright: "စိတ်ကူးသစ်၊ စတင်မှု", reversed: "ကြန့်ကြာမှု", advice: "အခွင့်အလမ်းသစ်ကို အမြန်ဆုပ်ကိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg" },
+    { name: "Two of Wands", upright: "အနာဂတ်အစီအစဉ်", reversed: "ကြောက်ရွံ့ခြင်း", advice: "ရည်မှန်းချက်ကြီးကြီး ထားရှိပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg" },
+    { name: "Three of Wands", upright: "တိုးတက်မှု၊ ခရီးစဉ်", reversed: "အဟန့်အတား", advice: "ရေရှည်ကြည့်၍ ပြင်ဆင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg" },
+    { name: "Four of Wands", upright: "အောင်ပွဲ၊ မင်္ဂလာသတင်း", reversed: "မတည်ငြိမ်မှု", advice: "အောင်မြင်မှုကို အောင်ပွဲခံပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg" },
+    { name: "Five of Wands", upright: "ပြိုင်ဆိုင်မှု၊ ပဋိပက္ခ", reversed: "ပဋိပက္ခ ပြီးဆုံးခြင်း", advice: "စိတ်အေးအေးထားပြီး ညှိနှိုင်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg" },
+    { name: "Six of Wands", upright: "အောင်မြင်မှု၊ အသိအမှတ်ပြုခံရခြင်း", reversed: "ကျရှုံးမှု", advice: "ကြိုးစားမှုကို ဆက်လက်ထိန်းသိမ်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg" },
+    { name: "Seven of Wands", upright: "စိန်ခေါ်မှုကို ရင်ဆိုင်ခြင်း", reversed: "လက်လျှော့ခြင်း", advice: "မိမိရပ်တည်ချက်ကို ဆုပ်ကိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg" },
+    { name: "Eight of Wands", upright: "မြန်ဆန်သော တိုးတက်မှု", reversed: "ကြန့်ကြာမှု", advice: "အမြန်ဆုံး မဆိုင်းမတွ လုပ်ဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg" },
+    { name: "Nine of Wands", upright: "ကြံ့ခိုင်မှု၊ စိန်ခေါ်မှု", reversed: "ပင်ပန်းနွမ်းနယ်ခြင်း", advice: "အဆုံးအထိ ဇွဲမလျှော့ပါနဲ့", image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Wands09.jpg" },
+    { name: "Ten of Wands", upright: "ဝန်ထုပ်ဝန်ပိုး၊ စိတ်ဖိစီးမှု", reversed: "ဝန်ထုတ်ဝန်ပိုး လျှော့ချခြင်း", advice: "တာဝန်များကို ခွဲဝေယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg" },
+    { name: "Page of Wands", upright: "သတင်းကောင်း၊ အကွက်သစ်", reversed: "သတင်းဆိုး", advice: "စိတ်ကူးသစ်များကို စမ်းသပ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg" },
+    { name: "Knight of Wands", upright: "တက်ကြွစွာ ဆောင်ရွက်ခြင်း", reversed: "မဆင်မခြင်လုပ်ခြင်း", advice: "ရည်မှန်းချက်ဆီ မြန်မြန်သွားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg" },
+    { name: "Queen of Wands", upright: "ယုံကြည်မှု၊ ဆွဲဆောင်မှု", reversed: "စိတ်တိုလွယ်ခြင်း", advice: "မိမိကိုယ်ကို ယုံကြည်မှုထားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg" },
+    { name: "King of Wands", upright: "ခေါင်းဆောင်မှု၊ အောင်မြင်မှု", reversed: "အာဏာရှင်ဆန်ခြင်း", advice: "ခေါင်းဆောင်ကောင်းပီသစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg" },
 
-    // --- MINOR ARCANA: CUPS (14 Cards) ---
-    { name: "Ace of Cups", upright: "ချစ်ခြင်းမေတ္တာ၊ ပျော်ရွှင်မှု၊ အစသစ်", reversed: "စိတ်ဒဏ်ရာ၊ မေတ္တာမဲ့ခြင်း", advice: "နှလုံးသားကို ဖွင့်ဟထားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg" },
-    { name: "Two of Cups", upright: "သဟဇာတဖြစ်ခြင်း၊ အချစ်၊ မိတ်ဆွေကောင်း", reversed: "နားလည်မှုလွဲခြင်း၊ လမ်းခွဲခြင်း", advice: "အချင်းချင်း နားလည်မှုတည်ဆောက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg" },
-    { name: "Three of Cups", upright: "အောင်ပွဲခံခြင်း၊ မိတ်ဆွေများနှင့် ပျော်ရွှင်ရခြင်း", reversed: "အတင်းအဖျင်း၊ အထီးကျန်ခြင်း", advice: "ချစ်ခင်ရသူများနှင့် အချိန်ပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg" },
-    { name: "Four of Cups", upright: "ငြီးငွေ့ခြင်း၊ အခွင့်အလမ်းကို မမြင်ခြင်း", reversed: "နိုးထလာခြင်း၊ အခွင့်အလမ်းသစ်တွေ့ခြင်း", advice: "ဘေးပတ်ဝန်းကျင်ကို သတိထားကြည့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg" },
-    { name: "Five of Cups", upright: "ဝမ်းနည်းခြင်း၊ ဆုံးရှုံးမှုအပေါ် အာရုံရောက်ခြင်း", reversed: "အတိတ်မှ ရုန်းထွက်နိုင်ခြင်း", advice: "ကျန်ရှိနေသော အကောင်းဘက်ကို ကြည့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg" },
-    { name: "Six of Cups", upright: "အတိတ်၏ အမှတ်တရ၊ ကလေးဘဝ၊ အကူအညီရခြင်း", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "အပြုသဘောဆောင်သော အမှတ်တရများကို သတိရပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg" },
-    { name: "Seven of Cups", upright: "စိတ်ကူးယဉ်ခြင်း၊ ရွေးချယ်စရာများပြားခြင်း", reversed: "အမှန်တရားကို မြင်လာခြင်း", advice: "လက်တွေ့ကျသော အရာကို ရွေးချယ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg" },
-    { name: "Eight of Cups", upright: "စွန့်ခွာခြင်း၊ ပိုကောင်းသောအရာကို ရှာဖွေခြင်း", reversed: "တွန့်ဆုတ်နေခြင်း၊ မစွန့်လွှတ်နိုင်ခြင်း", advice: "မလိုအပ်တော့သော အရာများကို စွန့်လွှတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg" },
-    { name: "Nine of Cups", upright: "ဆန္ဒပြည့်ဝခြင်း၊ စိတ်ချမ်းသာခြင်း", reversed: "အတ္တကြီးခြင်း၊ လောဘကြီးခြင်း", advice: "ရရှိထားသော အရာများအပေါ် ကျေနပ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg" },
-    { name: "Ten of Cups", upright: "မိသားစု ပျော်ရွှင်မှု၊ ပြည့်စုံသော အချစ်", reversed: "မိသားစု အဆင်မပြေမှု", advice: "မိသားစုနှင့် အချစ်ကို ဦးစားပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg" },
-    { name: "Page of Cups", upright: "သတင်းကောင်း၊ စိတ်ကူးစိတ်သန်း၊ အချစ်သတင်း", reversed: "စိတ်ခံစားချက် မတည်ငြိမ်ခြင်း", advice: "နူးညံ့သော စိတ်ဓာတ်ဖြင့် ရင်ဆိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cups11.jpg" },
-    { name: "Knight of Cups", upright: "အချစ်ကမ်းလှမ်းမှု၊ အနုပညာ၊ အိပ်မက်", reversed: "ကတိမတည်ခြင်း၊ စိတ်ကူးယဉ်လွန်းခြင်း", advice: "နှလုံးသား၏ ခေါ်ဆောင်ရာသို့ လိုက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/fa/fa/Cups12.jpg" },
-    { name: "Queen of Cups", upright: "ကြင်နာမှု၊ စာနာတတ်ခြင်း၊ ပင်ကိုအသိ", reversed: "စိတ်ခံစားချက် လွန်ကဲခြင်း", advice: "စာနာနားလည်မှုပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg" },
-    { name: "King of Cups", upright: "စိတ်ဓာတ် တည်ငြိမ်မှု၊ စာနာတတ်သော ခေါင်းဆောင်", reversed: "စိတ်ခံစားချက် ကမောက်ကမဖြစ်ခြင်း", advice: "စိတ်အေးအေးထားပြီး ထိန်းချုပ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg" },
+    // --- MINOR ARCANA: CUPS ---
+    { name: "Ace of Cups", upright: "ချစ်ခြင်းမေတ္တာ၊ အစသစ်", reversed: "စိတ်ဒဏ်ရာ", advice: "နှလုံးသားကို ဖွင့်ဟထားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg" },
+    { name: "Two of Cups", upright: "သဟဇာတဖြစ်ခြင်း၊ မိတ်ဆွေကောင်း", reversed: "နားလည်မှုလွဲခြင်း", advice: "အချင်းချင်း နားလည်မှုတည်ဆောက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg" },
+    { name: "Three of Cups", upright: "အောင်ပွဲခံခြင်း၊ ပျော်ရွှင်ရခြင်း", reversed: "အထီးကျန်ခြင်း", advice: "ချစ်ခင်ရသူများနှင့် အချိန်ပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg" },
+    { name: "Four of Cups", upright: "ငြီးငွေ့ခြင်း", reversed: "နိုးထလာခြင်း", advice: "ဘေးပတ်ဝန်းကျင်ကို သတိထားကြည့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg" },
+    { name: "Five of Cups", upright: "ဝမ်းနည်းခြင်း၊ ဆုံးရှုံးမှု", reversed: "အတိတ်မှ ရုန်းထွက်နိုင်ခြင်း", advice: "ကျန်ရှိနေသော အကောင်းဘက်ကို ကြည့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg" },
+    { name: "Six of Cups", upright: "အတိတ်၏ အမှတ်တရ", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "အပြုသဘောဆောင်သော အမှတ်တရများကို သတိရပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg" },
+    { name: "Seven of Cups", upright: "စိတ်ကူးယဉ်ခြင်း", reversed: "အမှန်တရားကို မြင်လာခြင်း", advice: "လက်တွေ့ကျသော အရာကို ရွေးချယ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg" },
+    { name: "Eight of Cups", upright: "စွန့်ခွာခြင်း", reversed: "တွန့်ဆုတ်နေခြင်း", advice: "မလိုအပ်တော့သော အရာများကို စွန့်လွှတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg" },
+    { name: "Nine of Cups", upright: "ဆန္ဒပြည့်ဝခြင်း", reversed: "အတ္တကြီးခြင်း", advice: "ရရှိထားသော အရာများအပေါ် ကျေနပ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg" },
+    { name: "Ten of Cups", upright: "မိသားစု ပျော်ရွှင်မှု", reversed: "မိသားစု အဆင်မပြေမှု", advice: "မိသားစုနှင့် အချစ်ကို ဦးစားပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg" },
+    { name: "Page of Cups", upright: "သတင်းကောင်း၊ စိတ်ကူး", reversed: "စိတ်ခံစားချက် မတည်ငြိမ်ခြင်း", advice: "နူးညံ့သော စိတ်ဓာတ်ဖြင့် ရင်ဆိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Cups11.jpg" },
+    { name: "Knight of Cups", upright: "အချစ်ကမ်းလှမ်းမှု", reversed: "စိတ်ကူးယဉ်လွန်းခြင်း", advice: "နှလုံးသား၏ ခေါ်ဆောင်ရာသို့ လိုက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg" },
+    { name: "Queen of Cups", upright: "ကြင်နာမှု၊ ပင်ကိုအသိ", reversed: "စိတ်ခံစားချက် လွန်ကဲခြင်း", advice: "စာနာနားလည်မှုပေးပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg" },
+    { name: "King of Cups", upright: "စိတ်ဓာတ် တည်ငြိမ်မှု", reversed: "စိတ်ခံစားချက် ကမောက်ကမဖြစ်ခြင်း", advice: "စိတ်အေးအေးထားပြီး ထိန်းချုပ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg" },
 
-    // --- MINOR ARCANA: SWORDS (14 Cards) ---
-    { name: "Ace of Swords", upright: "အမှန်တရား၊ ရှင်းလင်းသော အမြင်၊ အနိုင်ရခြင်း", reversed: "ဇဝေဇဝါဖြစ်ခြင်း၊ အမှား", advice: "ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg" },
-    { name: "Two of Swords", upright: "ဆုံးဖြတ်ရခက်ခြင်း၊ မျက်စိမှိတ်ထားခြင်း", reversed: "အမှန်တရားကို လက်ခံရခြင်း", advice: "သတ္တိရှိရှိ ဆုံးဖြတ်ချက်ချပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg" },
-    { name: "Three of Swords", upright: "နှလုံးသားထိခိုက်ရခြင်း၊ ဝမ်းနည်းမှု၊ လမ်းခွဲရခြင်း", reversed: "စိတ်ဒဏ်ရာ သက်သာလာခြင်း", advice: "အချိန်ပေး၍ စိတ်ဒဏ်ရာကို ကုစားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg" },
-    { name: "Four of Swords", upright: "နားနေခြင်း၊ စိတ်အေးချမ်းမှုရှာခြင်း", reversed: "ပြန်လည်နိုးထလာခြင်း၊ စိတ်ဖိစီးခြင်း", advice: "ခဏတာ အနားယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg" },
-    { name: "Five of Swords", upright: "အနိုင်ရသော်လည်း ဆုံးရှုံးရခြင်း၊ ပဋိပက္ခ", reversed: "ကျေအေးခြင်း၊ သင်ခန်းစာရခြင်း", advice: "မလိုအပ်သော တိုက်ပွဲများကို ရှောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg" },
-    { name: "Six of Swords", upright: "ခက်ခဲသောအချိန်မှ လွတ်မြောက်ခြင်း၊ ခရီး", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "ရှေ့ဆက်သွားရန် အချိန်တန်ပြီ", image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg" },
-    { name: "Seven of Swords", upright: "လှည့်ဖြားမှု၊ မရိုးသားမှု၊ တိတ်တဆိတ်လုပ်ခြင်း", reversed: "အမှန်တရား ပေါ်ပေါက်ခြင်း", advice: "သတိထားပြီး စိစစ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg" },
-    { name: "Eight of Swords", upright: "ပိတ်မိနေခြင်း၊ စိတ်ဓာတ်ကျခြင်း", reversed: "လွတ်မြောက်ခြင်း၊ အမြင်ကျယ်လာခြင်း", advice: "မိမိကိုယ်ကို ပိတ်လှောင်မထားပါနဲ့", image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg" },
-    { name: "Nine of Swords", upright: "စိုးရိမ်လွန်ခြင်း၊ အိပ်မက်ဆိုး၊ စိတ်ဖိစီးမှု", reversed: "စိုးရိမ်မှုများ လျှော့ပါးသွားခြင်း", advice: "အကြောက်တရားကို ရင်ဆိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg" },
-    { name: "Ten of Swords", upright: "အဆုံးသတ်၊ ကျရှုံးမှု extreme၊ နာကျင်မှု", reversed: "ပြန်လည် ထူထောင်လာခြင်း", advice: "အောက်ဆုံးသို့ ရောက်ပြီးပြီမို့ အသစ်ပြန်စပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords10.jpg" },
-    { name: "Page of Swords", upright: "စိစစ်လေ့လာခြင်း၊ သတင်းအချက်အလက်", reversed: "အတင်းအဖျင်း၊ မဆင်မခြင်ပြောဆိုခြင်း", advice: "သတင်းအချက်အလက် သေချာစုဆောင်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg" },
-    { name: "Knight of Swords", upright: "မြန်ဆန်စွာ လုပ်ဆောင်ခြင်း၊ ရဲရင့်မှု", reversed: "မဆင်မခြင် စိုက်ထုတ်ခြင်း", advice: "ဦးနှောက်နှင့် အကြံအစည်ပါတွဲပါ", image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg" },
-    { name: "Queen of Swords", upright: "ပြတ်သားမှု၊ အမှန်တရား၊ ဉာဏ်ပညာ", reversed: "ရက်စက်ခြင်း၊ စိတ်ခံစားချက်မဲ့ခြင်း", advice: "ဉာဏ်ပညာနှင့် ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg" },
-    { name: "King of Swords", upright: "ဉာဏ်ပညာကြီးမားခြင်း၊ တရားမျှတမှု", reversed: "အာဏာအလွဲသုံးစားလုပ်ခြင်း", advice: "အချက်အလက်နှင့် ယုတ္တိဗေဒကို အသုံးပြုပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg" },
+    // --- MINOR ARCANA: SWORDS ---
+    { name: "Ace of Swords", upright: "အမှန်တရား၊ အနိုင်ရခြင်း", reversed: "ဇဝေဇဝါဖြစ်ခြင်း", advice: "ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg" },
+    { name: "Two of Swords", upright: "ဆုံးဖြတ်ရခက်ခြင်း", reversed: "အမှန်တရားကို လက်ခံရခြင်း", advice: "သတ္တိရှိရှိ ဆုံးဖြတ်ချက်ချပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg" },
+    { name: "Three of Swords", upright: "နှလုံးသားထိခိုက်ရခြင်း", reversed: "စိတ်ဒဏ်ရာ သက်သာလာခြင်း", advice: "အချိန်ပေး၍ စိတ်ဒဏ်ရာကို ကုစားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg" },
+    { name: "Four of Swords", upright: "နားနေခြင်း၊ စိတ်အေးချမ်းမှု", reversed: "ပြန်လည်နိုးထလာခြင်း", advice: "ခဏတာ အနားယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg" },
+    { name: "Five of Swords", upright: "ပဋိပက္ခ၊ ဆုံးရှုံးရခြင်း", reversed: "ကျေအေးခြင်း", advice: "မလိုအပ်သော တိုက်ပွဲများကို ရှောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg" },
+    { name: "Six of Swords", upright: "ခက်ခဲချိန်မှ လွတ်မြောက်ခြင်း", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "ရှေ့ဆက်သွားရန် အချိန်တန်ပြီ", image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg" },
+    { name: "Seven of Swords", upright: "လှည့်ဖြားမှု၊ တိတ်တဆိတ်လုပ်ခြင်း", reversed: "အမှန်တရား ပေါ်ပေါက်ခြင်း", advice: "သတိထားပြီး စိစစ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg" },
+    { name: "Eight of Swords", upright: "ပိတ်မိနေခြင်း", reversed: "လွတ်မြောက်ခြင်း", advice: "မိမိကိုယ်ကို ပိတ်လှောင်မထားပါနဲ့", image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg" },
+    { name: "Nine of Swords", upright: "စိုးရိမ်လွန်ခြင်း၊ စိတ်ဖိစီးမှု", reversed: "စိုးရိမ်မှုများ လျှော့ပါးသွားခြင်း", advice: "အကြောက်တရားကို ရင်ဆိုင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg" },
+    { name: "Ten of Swords", upright: "အဆုံးသတ်၊ နာကျင်မှု", reversed: "ပြန်လည် ထူထောင်လာခြင်း", advice: "အသစ်ပြန်စပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords10.jpg" },
+    { name: "Page of Swords", upright: "စိစစ်လေ့လာခြင်း", reversed: "အတင်းအဖျင်း", advice: "သတင်းအချက်အလက် စုဆောင်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg" },
+    { name: "Knight of Swords", upright: "မြန်ဆန်စွာ လုပ်ဆောင်ခြင်း", reversed: "မဆင်မခြင် စိုက်ထုတ်ခြင်း", advice: "ဦးနှောက်နှင့် အကြံအစည်ပါတွဲပါ", image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg" },
+    { name: "Queen of Swords", upright: "ပြတ်သားမှု၊ ဉာဏ်ပညာ", reversed: "စိတ်ခံစားချက်မဲ့ခြင်း", advice: "ဉာဏ်ပညာနှင့် ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg" },
+    { name: "King of Swords", upright: "ဉာဏ်ပညာကြီးမားခြင်း", reversed: "အာဏာအလွဲသုံးစားလုပ်ခြင်း", advice: "ယုတ္တိဗေဒကို အသုံးပြုပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg" },
 
-    // --- MINOR ARCANA: PENTACLES (14 Cards) ---
-    { name: "Ace of Pentacles", upright: "ငွေကြေး အခွင့်အလမ်း၊ အစသစ်၊ အောင်မြင်မှု", reversed: "အခွင့်အလမ်း ဆုံးရှုံးခြင်း", advice: "ငွေကြေး အခွင့်အလမ်းကို မလွတ်ပါစေနဲ", image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Penta01.jpg" },
-    { name: "Two of Pentacles", upright: "ဟန်ချက်ထိန်းခြင်း၊ စီမံခန့်ခွဲမှု", reversed: "ဟန်ချက်ပျက်ခြင်း၊ ငွေကြေးကျဉ်းတောင်းခြင်း", advice: "အချိန်နှင့် ငွေကြေးကို စနစ်တကျ ထိန်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/90/Penta02.jpg" },
-    { name: "Three of Pentacles", upright: "အဖွဲ့လိုက် လုပ်ဆောင်ခြင်း၊ ကျွမ်းကျင်မှု", reversed: "ပူးပေါင်းဆောင်ရွက်မှု မရှိခြင်း", advice: "အခြားသူများနှင့် ပူးပေါင်းလုပ်ဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Penta03.jpg" },
-    { name: "Four of Pentacles", upright: "ငွေကြေး စုဆောင်းခြင်း၊ တည်ငြိမ်မှု", reversed: "ကပ်စေးနည်းခြင်း သို့မဟုတ် သုံးစွဲလွန်းခြင်း", advice: "ငွေကြေး တည်ငြိမ်အောင် ထိန်းသိမ်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Penta04.jpg" },
-    { name: "Five of Pentacles", upright: "ငွေကြေး အခက်အခဲ၊ အကူအညီမဲ့ခြင်း", reversed: "အခက်အခဲမှ လွတ်မြောက်ခြင်း", advice: "အကူအညီ တောင်းခံရန် မရှက်ပါနှင့်", image: "https://upload.wikimedia.org/wikipedia/commons/9/96/Penta05.jpg" },
-    { name: "Six of Pentacles", upright: "မျှဝေခြင်း၊ လှူဒါန်းခြင်း၊ အကူအညီရခြင်း", reversed: "မမျှတမှု၊ အမြတ်ထုတ်ခံရခြင်း", advice: "အပြန်အလှန် ကူညီဖေးမပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Penta06.jpg" },
-    { name: "Seven of Pentacles", upright: "အသီးအပွင့် ခံစားရခြင်း၊ စိတ်ရှည်မှု", reversed: "ကြိုးစားမှု အလကားဖြစ်ခြင်း", advice: "အသီးအပွင့်များ ရရှိရန် စိတ်ရှည်စွာ စောင့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Penta07.jpg" },
-    { name: "Eight of Pentacles", upright: "ကြိုးစားအားထုတ်ခြင်း၊ ကျွမ်းကျင်မှု တိုးတက်ခြင်း", reversed: "ပျင်းရိခြင်း၊ အရည်အသွေးမမီခြင်း", advice: "မိမိကျွမ်းကျင်မှုကို ပိုမိုမြှင့်တင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Penta08.jpg" },
-    { name: "Nine of Pentacles", upright: "ကြွယ်ဝချမ်းသာမှု၊ လွတ်လပ်စွာ စည်းစိမ်ခံစားရခြင်း", reversed: "ငွေကြေး မှီခိုရခြင်း", advice: "မိမိ အောင်မြင်မှုကို ဂုဏ်ယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Penta09.jpg" },
-    { name: "Ten of Pentacles", upright: "မိသားစု ကြွယ်ဝမှု၊ အမွေအနှစ်၊ အေးချမ်းမှု", reversed: "မိသားစု ငွေကြေး ပြဿနာ", advice: "ရေရှည် တည်ငြိမ်မှုကို တည်ဆောက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Penta10.jpg" },
+    // --- MINOR ARCANA: PENTACLES ---
+    { name: "Ace of Pentacles", upright: "ငွေကြေး အခွင့်အလမ်း", reversed: "အခွင့်အလမ်း ဆုံးရှုံးခြင်း", advice: "ငွေကြေး အခွင့်အလမ်းကို မလွတ်ပါစေနဲ", image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Penta01.jpg" },
+    { name: "Two of Pentacles", upright: "ဟန်ချက်ထိန်းခြင်း", reversed: "ဟန်ချက်ပျက်ခြင်း", advice: "အချိန်နှင့် ငွေကြေးကို စနစ်တကျ ထိန်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/9/90/Penta02.jpg" },
+    { name: "Three of Pentacles", upright: "အဖွဲ့လိုက် လုပ်ဆောင်ခြင်း", reversed: "ပူးပေါင်းဆောင်ရွက်မှု မရှိခြင်း", advice: "အခြားသူများနှင့် ပူးပေါင်းလုပ်ဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Penta03.jpg" },
+    { name: "Four of Pentacles", upright: "ငွေကြေး စုဆောင်းခြင်း", reversed: "သုံးစွဲလွန်းခြင်း", advice: "ငွေကြေး တည်ငြိမ်အောင် ထိန်းသိမ်းပါ", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Penta04.jpg" },
+    { name: "Five of Pentacles", upright: "ငွေကြေး အခက်အခဲ", reversed: "အခက်အခဲမှ လွတ်မြောက်ခြင်း", advice: "အကူအညီ တောင်းခံရန် မရှက်ပါနှင့်", image: "https://upload.wikimedia.org/wikipedia/commons/9/96/Penta05.jpg" },
+    { name: "Six of Pentacles", upright: "မျှဝေခြင်း၊ လှူဒါန်းခြင်း", reversed: "အမြတ်ထုတ်ခံရခြင်း", advice: "အပြန်အလှန် ကူညီဖေးမပါ", image: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Penta06.jpg" },
+    { name: "Seven of Pentacles", upright: "အသီးအပွင့် ခံစားရခြင်း", reversed: "ကြိုးစားမှု အလကားဖြစ်ခြင်း", advice: "စိတ်ရှည်စွာ စောင့်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Penta07.jpg" },
+    { name: "Eight of Pentacles", upright: "ကြိုးစားအားထုတ်ခြင်း", reversed: "ပျင်းရိခြင်း", advice: "မိမိကျွမ်းကျင်မှုကို ပိုမိုမြှင့်တင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Penta08.jpg" },
+    { name: "Nine of Pentacles", upright: "ကြွယ်ဝချမ်းသာမှု", reversed: "ငွေကြေး မှီခိုရခြင်း", advice: "မိမိ အောင်မြင်မှုကို ဂုဏ်ယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Penta09.jpg" },
+    { name: "Ten of Pentacles", upright: "မိသားစု ကြွယ်ဝမှု", reversed: "မိသားစု ငွေကြေး ပြဿနာ", advice: "ရေရှည် တည်ငြိမ်မှုကို တည်ဆောက်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Penta10.jpg" },
     { name: "Page of Pentacles", upright: "သင်ယူလိုစိတ်၊ ငွေကြေး သတင်းကောင်း", reversed: "အခွင့်အလမ်း လွတ်သွားခြင်း", advice: "ပညာ သို့မဟုတ် စီးပွားရေးသစ် သင်ယူပါ", image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Penta11.jpg" },
-    { name: "Knight of Pentacles", upright: "ဇွဲရှိခြင်း၊ တာဝန်ကျေခြင်း၊ အလုပ်လုပ်ခြင်း", reversed: "ပျင်းရိခြင်း၊ တင်းခံနေခြင်း", advice: "ဖြည်းဖြည်းနှင့် မှန်မှန် ကြိုးစားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Penta12.jpg" },
-    { name: "Queen of Pentacles", upright: "ကြွယ်ဝမှု၊ စိစစ်ခန့်ခွဲနိုင်မှု၊ မိခင်စိတ်", reversed: "ငွေကြေး ပူပန်လွန်းခြင်း", advice: "လက်တွေ့ကျကျ စိစစ်စီမံပါ", image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Penta13.jpg" },
-    { name: "King of Pentacles", upright: "စီးပွားရေး အောင်မြင်မှု၊ ဩဇာတိက္ကမ", reversed: "လောဘကြီးခြင်း၊ စီးပွားရေး ကျဆင်းခြင်း", advice: "စီးပွားရေးကို တည်ငြိမ်စွာ ဦးဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Penta14.jpg" }
+    { name: "Knight of Pentacles", upright: "ဇွဲရှိခြင်း၊ တာဝန်ကျေခြင်း", reversed: "ပျင်းရိခြင်း", advice: "ဖြည်းဖြည်းနှင့် မှန်မှန် ကြိုးစားပါ", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Penta12.jpg" },
+    { name: "Queen of Pentacles", upright: "ကြွယ်ဝမှု၊ စိစစ်ခန့်ခွဲနိုင်မှု", reversed: "ငွေကြေး ပူပန်လွန်းခြင်း", advice: "လက်တွေ့ကျကျ စိစစ်စီမံပါ", image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Penta13.jpg" },
+    { name: "King of Pentacles", upright: "စီးပွားရေး အောင်မြင်မှု", reversed: "လောဘကြီးခြင်း", advice: "စီးပွားရေးကို တည်ငြိမ်စွာ ဦးဆောင်ပါ", image: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Penta14.jpg" }
 ];
 
-// Main Draw Function
 function drawCards() {
     const userNameInput = document.getElementById("userName");
     const questionInput = document.getElementById("question");
@@ -104,7 +103,6 @@ function drawCards() {
 
     const container = document.getElementById("result-container");
 
-    // Shuffle and pick 3 unique cards
     const shuffled = [...tarotDeck].sort(() => 0.5 - Math.random());
     const selectedCards = shuffled.slice(0, 3);
     const positions = ["အတိတ်/နောက်ခံ", "ပစ္စုပ္ပန်/စိန်ခေါ်မှု", "အနာဂတ်/ရလဒ်"];
@@ -141,7 +139,7 @@ function drawCards() {
                 <small>${card.positionName}</small>
                 <h3>${card.name}</h3>
                 <div class="card-img-container">
-                    <img src="${card.image}" alt="${card.name}" style="${imageStyle}">
+                    <img src="${card.image}" alt="${card.name}" style="${imageStyle}" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/3/30/Card_back_01.svg';">
                 </div>
                 <p><b>အနေအထား:</b> ${card.orientation}</p>
                 <p><b>အဓိပ္ပာယ်:</b> ${card.meaning}</p>
@@ -158,7 +156,6 @@ function drawCards() {
     container.innerHTML = htmlContent;
 }
 
-// Generates local Burmese AI interpretation text
 function generateLocalAiReading(question, cards, userName) {
     const person = userName ? userName : "မေးမြန်းသူ";
     const reversedCount = cards.filter(c => c.isReversed).length;
