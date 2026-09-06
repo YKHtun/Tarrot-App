@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Reading App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 Tarot Reading App</h1>
+        <p>မိမိ သို့မဟုတ် သူငယ်ချင်းအတွက် မေးခွန်းရိုက်ထည့်ပါ</p>
+        
+        <input type="text" id="userName" placeholder="နာမည် (ဥပမာ - မင်းမင်း) / မထည့်လည်းရသည်">
+        <input type="text" id="question" placeholder="သိလိုသော မေးခွန်း (ဥပမာ - အလုပ်အဆင်ပြေမလား)...">
+        
+        <button onclick="drawCards()">ကတ် ၃ ချပ် နှိုက်မည်</button>
+
+        <div id="result-container" class="cards-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
