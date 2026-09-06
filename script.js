@@ -1,92 +1,560 @@
 // Tarot Deck 78 Cards with Resized CDN Links
 const tarotDeck = [
     // --- MAJOR ARCANA (22) ---
-    { name: "0. The Fool", upright: "အစသစ်၊ လွတ်လပ်မှု၊ စွန့်စားမှု", reversed: "ပေါ့ဆမှု၊ စွန့်စားလွန်းခြင်း", advice: "သတိထားပြီး သေချာစဉ်းစားလုပ်ဆောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m00.jpg" },
-    { name: "I. The Magician", upright: "စွမ်းရည်၊ ဖန်တီးမှု၊ အခွင့်အလမ်း", reversed: "လှည့်ဖြားခံရခြင်း၊ ယုံကြည်မှုနည်းခြင်း", advice: "မိမိစွမ်းရည်ကို ယုံကြည်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m01.jpg" },
-    { name: "II. The High Priestess", upright: "ပင်ကိုအသိ၊ လျှို့ဝှက်ချက်", reversed: "စိတ်ရှုပ်ထွေးခြင်း၊ သံသယရှိခြင်း", advice: "စိတ်အေးအေးထားပြီး ပင်ကိုအသိကို အားကိုးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m02.jpg" },
-    { name: "III. The Empress", upright: "အောင်မြင်မှု၊ အကူအညီရရှိခြင်း", reversed: "တိုးတက်မှုနှေးခြင်း၊ စိတ်ဖိစီးခြင်း", advice: "စိတ်ရှည်ရှည်နဲ့ အချိန်ပေးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m03.jpg" },
-    { name: "IV. The Emperor", upright: "တည်ငြိမ်မှု၊ အာဏာ၊ စည်းကမ်း", reversed: "ထိန်းချုပ်ခံရခြင်း၊ အဆင်မပြေမှု", advice: "စည်းကမ်းနှင့် တည်ငြိမ်မှုကို ဦးစားပေးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m04.jpg" },
-    { name: "V. The Hierophant", upright: "လမ်းညွှန်မှုရရှိခြင်း၊ သင်ယူခြင်း", reversed: "သဘောထားကွဲလွဲခြင်း၊ လွတ်လပ်ချင်ခြင်း", advice: "လူကြီးသူမများ၏ အကြံဉာဏ်ကို ရယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m05.jpg" },
-    { name: "VI. The Lovers", upright: "ချစ်ခြင်း၊ သဘောတူညီမှု၊ ရွေးချယ်မှု", reversed: "မညီမျှမှု၊ ဆုံးဖြတ်ရခက်ခြင်း", advice: "နှလုံးသားနှင့် ဦးနှောက် မျှတစွာ ရွေးချယ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m06.jpg" },
-    { name: "VII. The Chariot", upright: "အောင်မြင်စွာ ကျော်လွှားနိုင်ခြင်း၊ ထိန်းချုပ်မှု", reversed: "ထိန်းချုပ်ရခက်ခြင်း၊ လမ်းကြောင်းလွဲခြင်း", advice: "ဇွဲစိုက်ထုတ်ပြီး ရှေ့ဆက်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m07.jpg" },
-    { name: "VIII. Strength", upright: "သတ္တိ၊ စိတ်ဓာတ်ကြံ့ခိုင်မှု၊ စိတ်ရှည်မှု", reversed: "ဇဝေဇဝါဖြစ်ခြင်း၊ အားနည်းခြင်း", advice: "ကြင်နာမှုနှင့် စိတ်ရှည်မှုဖြင့် ဖြေရှင်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m08.jpg" },
-    { name: "IX. The Hermit", upright: "ဆင်ခြင်တုံတရား၊ မိမိကိုယ်တိုင် ပြန်လည်စိစစ်ခြင်း", reversed: "တစ်ကောင်ကြွက်ဖြစ်ခြင်း၊ အထီးကျန်ခြင်း", advice: "အေးဆေးစွာ သုံးသပ်ရန် အချိန်ယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m09.jpg" },
-    { name: "X. Wheel of Fortune", upright: "ကံကြမ္မာအလှည့်အပြောင်း၊ လာဘ်ရွှင်ခြင်း", reversed: "ကံမကောင်းခြင်း၊ အပြောင်းအလဲနှေးခြင်း", advice: "အခွင့်အလမ်းကို အမိအရဆုပ်ကိုင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m10.jpg" },
-    { name: "XI. Justice", upright: "တရားမျှတမှု၊ အမှန်တရား၊ ဆုံးဖြတ်ချက်", reversed: "မမျှတမှု၊ ဆုံးဖြတ်ချက်မှားခြင်း", advice: "မှန်ကန်သော လမ်းကြောင်းအတိုင်း ဆောင်ရွက်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m11.jpg" },
-    { name: "XII. The Hanged Man", upright: "အနစ်နာခံခြင်း၊ အမြင်သစ်ရရှိခြင်း", reversed: "အလကားအချိန်ကုန်ခြင်း၊ အချိန်ဆွဲခြင်း", advice: "ကိစ္စများကို အမြင်သစ်တစ်ခုဖြင့် ကြည့်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m12.jpg" },
-    { name: "XIII. Death", upright: "အဆုံးသတ်နှင့် အစသစ်၊ ပြောင်းလဲခြင်း", reversed: "ပြောင်းလဲရန် ငြင်းဆန်ခြင်း၊ အဟောင်းကို ဖက်တွယ်ထားခြင်း", advice: "အသစ်စတင်ရန် အဟောင်းကို စွန့်လွှတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m13.jpg" },
-    { name: "XIV. Temperance", upright: "မျှတမှု၊ ညှိနှိုင်းဖြေရှင်းနိုင်ခြင်း", reversed: "ဟန်ချက်ပျက်ခြင်း၊ လွန်ကဲခြင်း", advice: "အစွန်းမရောက်ဘဲ ဟန်ချက်ညီအောင် ထိန်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m14.jpg" },
-    { name: "XV. The Devil", upright: "စွဲလမ်းမှု၊ ထိန်းချုပ်ခံရခြင်း", reversed: "လွတ်မြောက်ခြင်း၊ သတိဝင်လာခြင်း", advice: "မကောင်းသော အကျင့်များကို စွန့်လွှတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m15.jpg" },
-    { name: "XVI. The Tower", upright: "ရုတ်တရက် အပြောင်းအလဲ၊ အမှန်တရား ပေါ်ပေါက်ခြင်း", reversed: "ကျရှုံးမှုကို ရှောင်လွှဲနိုင်ခြင်း", advice: "အခက်အခဲမှ သင်ခန်းစာယူ၍ ပြန်လည်စတင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m16.jpg" },
-    { name: "XVII. The Star", upright: "မျှော်လင့်ချက်၊ အေးချမ်းမှု၊ ယုံကြည်မှု", reversed: "စိတ်ပျက်ခြင်း၊ မျှော်လင့်ချက်မဲ့ခြင်း", advice: "အကောင်းမြင်စိတ်ဖြင့် မျှော်လင့်ချက် ထားရှိပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m17.jpg" },
-    { name: "XVIII. The Moon", upright: "စိုးရိမ်ပူပန်မှု၊ မရေမရာဖြစ်ခြင်း", reversed: "သံသယများ ရှင်းလင်းသွားခြင်း", advice: "စိတ်ကူးယဉ် စိုးရိမ်မှုများကို လျှော့ချပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m18.jpg" },
-    { name: "XIX. The Sun", upright: "ဝမ်းမြောက်ခြင်း၊ အောင်မြင်မှု၊ တက်ကြွမှု", reversed: "ယာယီအခက်အခဲ၊ စိတ်မကြည်မလင်ဖြစ်ခြင်း", advice: "တက်ကြွစွာဖြင့် ရဲရဲဝံ့ဝံ့ ဆက်လက်လုပ်ဆောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m19.jpg" },
-    { name: "XX. Judgement", upright: "ဆုံးဖြတ်ချက်၊ သတင်းကောင်း၊ ပြန်လည်နိုးထခြင်း", reversed: "နောင်တရခြင်း၊ မိမိကိုယ်ကို သံသယဖြစ်ခြင်း", advice: "အတိတ်ကို ထားခဲ့ပြီး ဆုံးဖြတ်ချက်မှန်မှန် ချပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m20.jpg" },
-    { name: "XXI. The World", upright: "ပြည့်စုံခြင်း၊ အောင်မြင်စွာ ပြီးမြောက်ခြင်း", reversed: "မပြီးဆုံးသေးခြင်း၊ အဟန့်အတားရှိခြင်း", advice: "ကြိုးစားမှုကို အဆုံးထိ လက်မလျှော့ပါနဲ့", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m21.jpg" },
+    { 
+        name: "0. The Fool", 
+        upright: "ဘဝမှာ အစသစ်တစ်ခု စတော့မယ်၊ ရဲရဲဝံ့ဝံ့ စွန့်စားကြည့်လိုက်ပါ", 
+        reversed: "ပေါ့ဆလွန်းရင် ပျက်စီးနိုင်တယ်၊ မဆင်မခြင် စွန့်စားတာမျိုး သတိထားပါ", 
+        advice: "ခြေလှမ်းမလှမ်းခင် သေချာစဉ်းစားပါ၊ စိတ်ဇောနဲ့တင် မလုပ်လိုက်ပါနဲ့", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m00.jpg" 
+    },
+    { 
+        name: "I. The Magician", 
+        upright: "မင်းမှာ လိုအပ်တဲ့ စွမ်းရည်နဲ့ အခွင့်အလမ်း အကုန်ရှိနေပြီ၊ စတင်လိုက်တော့", 
+        reversed: "ကိုယ့်ကိုယ်ကို ယုံကြည်မှု မရှိသေးဘူး၊ ဒါမှမဟုတ် သူတစ်ပါး လှည့်ဖြားတာ ခံရနိုင်တယ်", 
+        advice: "ကိုယ့်မှာရှိတဲ့ ပင်ကိုစွမ်းရည်ကို ပညာရှိရှိ အသုံးပြုပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m01.jpg" 
+    },
+    { 
+        name: "II. The High Priestess", 
+        upright: "အတွင်းစိတ်ရဲ့ အသံကို နားထောင်ပါ၊ လျှို့ဝှက်ချက် အမှန်တရားတွေ ပေါ်လာလိမ့်မယ်", 
+        reversed: "စိတ်ဓာတ်မတည်ငြိမ်ဘ ဖြစ်နေတယ်၊ ဘာလုပ်ရမှန်းမသိ လမ်းပျောက်နေသလိုမျိုးပါ", 
+        advice: "လောဘမကြီးဘဲ စိတ်အေးအေးထားပြီး ကိုယ့်ရဲ့ ပင်ကိုအသိကို အားကိုးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m02.jpg" 
+    },
+    { 
+        name: "III. The Empress", 
+        upright: "တိုးတက်အောင်မြင်မှုတွေ ရတော့မယ်၊ ဘဝက အဆင်ပြေ သာယာနေပါပြီ", 
+        reversed: "လုပ်သလောက် ခရီးမရောက်ဘဲ တိုးတက်မှု နှေးကွေးနေလို့ စိတ်ဖိစီးနေရတယ်", 
+        advice: "လောမကြီးပါနဲ့၊ အချိန်တန်ရင် အရာရာ အဆင်ပြေလာမှာမို့ စိတ်ရှည်ပေးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m03.jpg" 
+    },
+    { 
+        name: "IV. The Emperor", 
+        upright: "အခြေအနေတွေကို ထိန်းချုပ်နိုင်ပြီ၊ အလုပ်နဲ့ ဘဝမှာ တည်ငြိမ်မှုရလိမ့်မယ်", 
+        reversed: "သူများ ထိန်းချုပ်တာ ခံနေရတယ်၊ စည်းကမ်းမရှိဘဲ အဆင်မပြေဖြစ်နေတယ်", 
+        advice: "စည်းကမ်းရှိရှိနဲ့ တည်ငြိမ်စွာ ဆုံးဖြတ်ချက်ချပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m04.jpg" 
+    },
+    { 
+        name: "V. The Hierophant", 
+        upright: "လူကြီးသူမတွေရဲ့ လမ်းညွှန်မှု ရလိမ့်မယ်၊ အစဉ်အလာအတိုင်း သွားတာ အကောင်းဆုံးပါ", 
+        reversed: "စနစ်ဟောင်းတွေကို မကြိုက်ဘဲ ရုန်းထွက်ချင်နေတယ်၊ သဘောထားကွဲလွဲနိုင်တယ်", 
+        advice: "ဝါရင့်သူတွေနဲ့ လူကြီးသူမတွေရဲ့ အကြံဉာဏ်ကို တိုတိုတုတ်တုတ် တိုင်ပင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m05.jpg" 
+    },
+    { 
+        name: "VI. The Lovers", 
+        upright: "အချစ်ရေးနဲ့ ပူးပေါင်းဆောင်ရွက်မှုတွေမှာ အဆင်ပြေမယ်၊ သဘောတူညီမှု ရလိမ့်မယ်", 
+        reversed: "လမ်းခွဲရခက်နေတယ်၊ ရွေးချယ်မှု မှားယွင်းပြီး မညီမမျှဖြစ်နေတယ်", 
+        advice: "နှလုံးသားရော ဦးနှောက်ပါ မျှတစွာ သုံးပြီး သေချာရွေးချယ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m06.jpg" 
+    },
+    { 
+        name: "VII. The Chariot", 
+        upright: "အခက်အခဲတွေကို အောင်မြင်စွာ ကျော်လွှားနိုင်မယ်၊ ပန်းတိုင်ကို အရောက်သွားပါ", 
+        reversed: "ထိန်းချုပ်ရခက်နေတယ်၊ လမ်းကြောင်းလွဲပြီး ဇဝေဇဝါ ဖြစ်နေတယ်", 
+        advice: "ဇွဲစိုက်ထုတ်ပြီး ရှေ့ကိုဘဲ ရဲရဲဝံ့ဝံ့ ဆက်သွားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m07.jpg" 
+    },
+    { 
+        name: "VIII. Strength", 
+        upright: "စိတ်ဓာတ်ကြံ့ခိုင်မှုနဲ့ ခန္ဓာကိုယ် စွမ်းအားပြည့်ဝနေတယ်၊ အရာရာကို ရင်ဆိုင်နိုင်တယ်", 
+        reversed: "စိတ်ဓာတ်ကျနေတယ်၊ ကိုယ့်အစွမ်းအစကို ယုံကြည်မှု နည်းပါးနေတယ်", 
+        advice: "ဒေါသနဲ အကြမ်းမဖက်ဘဲ ကြင်နာမှုနဲ့ စိတ်ရှည်မှု သုံးပြီး ဖြေရှင်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m08.jpg" 
+    },
+    { 
+        name: "IX. The Hermit", 
+        upright: "အေးဆေးစွာ စိစစ်စဉ်းစားရမယ့် အချိန်ပါ၊ ကိုယ့်အဖြေကို ကိုယ်တိုင် ရှာတွေ့လိမ့်မယ်", 
+        reversed: "အထီးကျန်လွန်းနေတယ်၊ ပတ်ဝန်းကျင်နဲ့ အဆက်အသွယ် ဖြတ်ထားသလို ဖြစ်နေတယ်", 
+        advice: "တစ်ယောက်တည်း အေးဆေးစွာ သုံးသပ်ဖို့ ခဏတာ အချိန်ယူလိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m09.jpg" 
+    },
+    { 
+        name: "X. Wheel of Fortune", 
+        upright: "ကံကြမ္မာ အလှည့်အပြောင်း ရောက်ပြီ၊ အခြေအနေတွေ ပိုမိုကောင်းမွန်လာတော့မယ်", 
+        reversed: "ကံမကောင်းသလို ခံစားရမယ်၊ ပြောင်းလဲမှုတွေက နှေးကွေးနေတယ်", 
+        advice: "ရောက်လာတဲ့ အခွင့်အလမ်းကို မလွတ်တမ်း အမိအရ ဆုပ်ကိုင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m10.jpg" 
+    },
+    { 
+        name: "XI. Justice", 
+        upright: "တရားမျှတမှု ရလိမ့်မယ်၊ လုပ်ခဲ့တဲ့ အတိုင်း ပြန်လည် ရရှိမှာပါ", 
+        reversed: "မမျှတမှုတွေ ကြုံရနိုင်တယ်၊ ဆုံးဖြတ်ချက် လွဲမှားနိုင်တယ်", 
+        advice: "မှန်ကန်ကြောင်း သေချာတဲ့ လမ်းကြောင်းအတိုင်းပဲ ဆောင်ရွက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m11.jpg" 
+    },
+    { 
+        name: "XII. The Hanged Man", 
+        upright: "အမြင်သစ်တစ်ခု ရဖို့အတွက် အချိန်ခဏတာ စောင့်ဆိုင်း အနစ်နာခံရလိမ့်မယ်", 
+        reversed: "အလကား အချိန်ကုန်နေတယ်၊ အချိန်ဆွဲလွန်းလို့ အခွင့်အလမ်း လွတ်နေတယ်", 
+        advice: "ကိစ္စတွေကို ပုံမှန်ကြည့်နေကျ မဟုတ်တဲ့ အမြင်သစ်တစ်ခုနဲ့ ကြည့်ပေးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m12.jpg" 
+    },
+    { 
+        name: "XIII. Death", 
+        upright: "အဟောင်းတွေ အဆုံးသတ်ပြီး အသစ်စတင်ရတော့မယ်၊ ကြီးမားတဲ့ အပြောင်းအလဲပါ", 
+        reversed: "ပြောင်းလဲမှုကို ငြင်းဆန်နေတယ်၊ အဟောင်းတွေကို ဖက်တွယ်ထားလို့ နာကျင်ရတယ်", 
+        advice: "အသစ်စတင်နိုင်ဖို့ မလိုတော့တဲ့ အဟောင်းတွေကို ရဲရဲစွန့်လွှတ်လိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m13.jpg" 
+    },
+    { 
+        name: "XIV. Temperance", 
+        upright: "အရာရာ ဟန်ချက်ညီနေပြီ၊ စိတ်အေးချမ်းမှုနဲ့ ညှိနှိုင်းမှုတွေ အဆင်ပြေမယ်", 
+        reversed: "ဟန်ချက်ပျက်နေတယ်၊ တစ်ခုခုကို လွန်လွန်ကဲကဲ လုပ်မိနေတယ်", 
+        advice: "အစွန်းမရောက်စေဘဲ မျှမျှတတဖြစ်အောင် စိတ်ကို ထိန်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m14.jpg" 
+    },
+    { 
+        name: "XV. The Devil", 
+        upright: "မကောင်းတဲ့ အကျင့် သို့မဟုတ် စွဲလမ်းမှုတစ်ခုခုရဲ့ ထိန်းချုပ်မှုကို ခံနေရတယ်", 
+        reversed: "မကောင်းတဲ့ စွဲလမ်းမှုတွေကနေ လွတ်မြောက်ပြီး သတိဝင်လာပြီ", 
+        advice: "ကိုယ့်ကို ဒုက္ခပေးနေတဲ့ စွဲလမ်းမှု သို့မဟုတ် အကျင့်ဆိုးတွေကို စွန့်လွှတ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m15.jpg" 
+    },
+    { 
+        name: "XVI. The Tower", 
+        upright: "ရုတ်တရက် အပြောင်းအလဲကြီး ကြုံရနိုင်တယ်၊ အမှန်တရား ပေါ်ပေါက်လာမယ်", 
+        reversed: "ကျရှုံးမှု သို့မဟုတ် ဘေးအန္တရာယ်တစ်ခုကို သီသီလေး လွတ်မြောက်ခဲ့တယ်", 
+        advice: "ဖြစ်ပျက်သွားတဲ့ အရာတွေကနေ သင်ခန်းစာယူပြီး ပြန်စပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m16.jpg" 
+    },
+    { 
+        name: "XVII. The Star", 
+        upright: "မျှော်လင့်ချက် ရောင်ခြည် လင်းလာပြီ၊ အေးချမ်းမှုနဲ့ အဆင်ပြေမှုတွေ ရောက်လာမယ်", 
+        reversed: "စိတ်ပျက်လက်ပျက် ဖြစ်နေတယ်၊ မျှော်လင့်ချက်မဲ့နေသလို ခံစားရမယ်", 
+        advice: "အကောင်းမြင်စိတ် မပျောက်ပါစေနဲ့၊ အရာရာ အဆင်ပြေလာမှာပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m17.jpg" 
+    },
+    { 
+        name: "XVIII. The Moon", 
+        upright: "စိတ်စိုးရိမ်မှုတွေ များနေတယ်၊ ဘာမှ သေချာမသိရသေးဘဲ မရေမရာ ဖြစ်နေမယ်", 
+        reversed: "သံသယတွေ ရှင်းသွားပြီ၊ မကြာခင် အမှန်တရားကို သိမြင်ရတော့မယ်", 
+        advice: "စိတ်ကူးယဉ်ပြီး ပူပန်နေတာတွေကို လျှော့ပါ၊ အမှန်တရားကို စောင့်ကြည့်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m18.jpg" 
+    },
+    { 
+        name: "XIX. The Sun", 
+        upright: "အရမ်းကောင်းတဲ့ ကတ်ပါ၊ ပျော်ရွှင်မှု၊ အောင်မြင်မှုနဲ့ တက်ကြွမှုတွေ ပြည့်နှက်နေမယ်", 
+        reversed: "ယာယီ အခက်အခဲလေးတွေ ရှိနိုင်ပေမဲ့ အကြီးအကျယ် စိုးရိမ်စရာ မလိုပါဘူး", 
+        advice: "ယုံကြည်မှု အပြည့်နဲ့ တက်ကြွစွာ ရှေ့ဆက်လိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m19.jpg" 
+    },
+    { 
+        name: "XX. Judgement", 
+        upright: "သတင်းကောင်း ရမယ်၊ အတိတ်က အမှားတွေကို ပြင်ဆင်ပြီး နိုးထရမယ့် အချိန်ပါ", 
+        reversed: "အတိတ်ကို နောင်တရနေတုန်းပဲ၊ ကိုယ့်ကိုယ်ကို သံသယဖြစ်ပြီး ဆုံးဖြတ်ရခက်နေတယ်", 
+        advice: "အတိတ်ကို ထားခဲ့လိုက်ပါ၊ အနာဂတ်အတွက် ဆုံးဖြတ်ချက် မှန်မှန်ချပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m20.jpg" 
+    },
+    { 
+        name: "XXI. The World", 
+        upright: "ပန်းတိုင်ကို အောင်မြင်စွာ ရောက်ရှိပြီ၊ ဘဝမှာ ပြည့်စုံမှု ရရှိပါလိမ့်မယ်", 
+        reversed: "အရာရာ မပြီးဆုံးသေးဘူး၊ လမ်းခုလတ်မှာ အဟန့်အတားလေးတွေ ကြုံနေရတယ်", 
+        advice: "ကြိုးစားထားတာတွေကို အဆုံးထိ လက်မလျှော့ဘဲ ဆက်လုပ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/m21.jpg" 
+    },
 
     // --- MINOR ARCANA: WANDS ---
-    { name: "Ace of Wands", upright: "စိတ်ကူးသစ်၊ စတင်မှု", reversed: "ကြန့်ကြာမှု", advice: "အခွင့်အလမ်းသစ်ကို အမြန်ဆုပ်ကိုင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w01.jpg" },
-    { name: "Two of Wands", upright: "အနာဂတ်အစီအစဉ်", reversed: "ကြောက်ရွံ့ခြင်း", advice: "ရည်မှန်းချက်ကြီးကြီး ထားရှိပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w02.jpg" },
-    { name: "Three of Wands", upright: "တိုးတက်မှု၊ ခရီးစဉ်", reversed: "အဟန့်အတား", advice: "ရေရှည်ကြည့်၍ ပြင်ဆင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w03.jpg" },
-    { name: "Four of Wands", upright: "အောင်ပွဲ၊ မင်္ဂလာသတင်း", reversed: "မတည်ငြိမ်မှု", advice: "အောင်မြင်မှုကို အောင်ပွဲခံပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w04.jpg" },
-    { name: "Five of Wands", upright: "ပြိုင်ဆိုင်မှု၊ ပဋိပက္ခ", reversed: "ပဋိပက္ခ ပြီးဆုံးခြင်း", advice: "စိတ်အေးအေးထားပြီး ညှိနှိုင်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w05.jpg" },
-    { name: "Six of Wands", upright: "အောင်မြင်မှု၊ အသိအမှတ်ပြုခံရခြင်း", reversed: "ကျရှုံးမှု", advice: "ကြိုးစားမှုကို ဆက်လက်ထိန်းသိမ်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w06.jpg" },
-    { name: "Seven of Wands", upright: "စိန်ခေါ်မှုကို ရင်ဆိုင်ခြင်း", reversed: "လက်လျှော့ခြင်း", advice: "မိမိရပ်တည်ချက်ကို ဆုပ်ကိုင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w07.jpg" },
-    { name: "Eight of Wands", upright: "မြန်ဆန်သော တိုးတက်မှု", reversed: "ကြန့်ကြာမှု", advice: "အမြန်ဆုံး မဆိုင်းမတွ လုပ်ဆောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w08.jpg" },
-    { name: "Nine of Wands", upright: "ကြံ့ခိုင်မှု၊ စိန်ခေါ်မှု", reversed: "ပင်ပန်းနွမ်းနယ်ခြင်း", advice: "အဆုံးအထိ ဇွဲမလျှော့ပါနဲ့", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w09.jpg" },
-    { name: "Ten of Wands", upright: "ဝန်ထုပ်ဝန်ပိုး၊ စိတ်ဖိစီးမှု", reversed: "ဝန်ထုတ်ဝန်ပိုး လျှော့ချခြင်း", advice: "တာဝန်များကို ခွဲဝေယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w10.jpg" },
-    { name: "Page of Wands", upright: "သတင်းကောင်း၊ အကွက်သစ်", reversed: "သတင်းဆိုး", advice: "စိတ်ကူးသစ်များကို စမ်းသပ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w11.jpg" },
-    { name: "Knight of Wands", upright: "တက်ကြွစွာ ဆောင်ရွက်ခြင်း", reversed: "မဆင်မခြင်လုပ်ခြင်း", advice: "ရည်မှန်းချက်ဆီ မြန်မြန်သွားပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w12.jpg" },
-    { name: "Queen of Wands", upright: "ယုံကြည်မှု၊ ဆွဲဆောင်မှု", reversed: "စိတ်တိုလွယ်ခြင်း", advice: "မိမိကိုယ်ကို ယုံကြည်မှုထားပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w13.jpg" },
-    { name: "King of Wands", upright: "ခေါင်းဆောင်မှု၊ အောင်မြင်မှု", reversed: "အာဏာရှင်ဆန်ခြင်း", advice: "ခေါင်းဆောင်ကောင်းပီသစွာ ဆုံးဖြတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w14.jpg" },
+    { 
+        name: "Ace of Wands", 
+        upright: "စိတ်ကူးသစ်နဲ့ အခွင့်အလမ်းသစ် ရလာတော့မယ်၊ ချက်ချင်း စတင်လိုက်ပါ", 
+        reversed: "အစီအစဉ်တွေ အထမမြောက်ဘဲ ကြန့်ကြာနေလိမ့်မယ်", 
+        advice: "ရောက်လာတဲ့ အခွင့်အလမ်းသစ်ကို မဆိုင်းမတွ အမြန်ဆုပ်ကိုင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w01.jpg" 
+    },
+    { 
+        name: "Two of Wands", 
+        upright: "ရှေ့ဆက်ရမယ့် အစီအစဉ်တွေကို သေချာ ရေးဆွဲရတော့မယ့် အချိန်ပါ", 
+        reversed: "ကြောက်ရွံ့နေလို့ ရှေ့မတိုးရဲဘဲ ဖြစ်နေတယ်", 
+        advice: "ရည်မှန်းချက် ကြီးကြီးထားပြီး သေချာ စီမံကိန်းဆွဲပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w02.jpg" 
+    },
+    { 
+        name: "Three of Wands", 
+        upright: "ကြိုးစားထားတာတွေ အသီးအပွင့် စတင်သီးပွင့်လာပြီ၊ တိုးတက်မှု ရလာမယ်", 
+        reversed: "မျှော်လင့်ထားသလို ဖြစ်မလာဘဲ အဟန့်အတားတွေ ကြုံနေရတယ်", 
+        advice: "ရေရှည်ကြည့်ပြီး ပညာရှိရှိ ပြင်ဆင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w03.jpg" 
+    },
+    { 
+        name: "Four of Wands", 
+        upright: "အောင်ပွဲခံရမယ့် အချိန်ပါ၊ မိသားစုနဲ့အတူ မင်္ဂလာသတင်း ကြားရလိမ့်မယ်", 
+        reversed: "အိမ်တွင်း ဒါမှမဟုတ် အဖွဲ့အစည်းထဲမှာ မတည်ငြိမ်မှုလေးတွေ ရှိနေတယ်", 
+        advice: "ရရှိထားတဲ့ အောင်မြင်မှုကို ဝမ်းမြောက်စွာ အောင်ပွဲခံပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w04.jpg" 
+    },
+    { 
+        name: "Five of Wands", 
+        upright: "ပြိုင်ဆိုင်မှုတွေ၊ သဘောထား ကွဲလွဲမှုတွေနဲ ကြုံရနိုင်တယ်", 
+        reversed: "ပဋိပက္ခတွေ ပြီးဆုံးသွားပြီး အေးချမ်းသွားမယ်", 
+        advice: "ဒေါသ မထွက်ပါနဲ့၊ စိတ်အေးအေးထားပြီး ညှိနှိုင်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w05.jpg" 
+    },
+    { 
+        name: "Six of Wands", 
+        upright: "လူတွေရဲ့ အသိအမှတ်ပြုမှုကို ရရှိပြီး အောင်ပွဲဆင်ရလိမ့်မယ်", 
+        reversed: "မျှော်လင့်ထားသလို အသိအမှတ်ပြု မခံရဘ စိတ်ပျက်ရနိုင်တယ်", 
+        advice: "ခုလို ကြိုးစားမှုကို မလျှော့ဘဲ ဆက်လက် ထိန်းသိမ်းထားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w06.jpg" 
+    },
+    { 
+        name: "Seven of Wands", 
+        upright: "စိန်ခေါ်မှုတွေကို ရင်ဆိုင်နေရတယ်၊ ဒါပေမဲ့ မင်း အနိုင်ရမှာပါ", 
+        reversed: "စိတ်ဓာတ်ကျပြီး လက်လျှော့ချင်နေတယ်", 
+        advice: "ကိုယ့်ရပ်တည်ချက်ကို မယိမ်းယိုင်ဘဲ ခိုင်ခိုင်မာမာ ဆုပ်ကိုင်ထားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w07.jpg" 
+    },
+    { 
+        name: "Eight of Wands", 
+        upright: "ကိစ္စအဝဝ မြန်မြန်ဆန်ဆန် တိုးတက်လာမယ်၊ သတင်းကောင်း ရလိမ့်မယ်", 
+        reversed: "အစီအစဉ်တွေ ကြန့်ကြာပြီး တိုင်ပတ်နေမယ်", 
+        advice: "အချိန်မဆွဲပါနဲ့၊ မဆိုင်းမတွ မြန်မြန်ဆန်ဆန် လုပ်ဆောင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w08.jpg" 
+    },
+    { 
+        name: "Nine of Wands", 
+        upright: "ပင်ပန်းနေပြီ ဆိုပေမဲ့ ပန်းတိုင် ရောက်ခါနီးပြီ၊ အဆုံးထိ တောင့်ခံလိုက်ပါ", 
+        reversed: "အားကုန်နေပြီ၊ ဆက်မတောင့်ခံနိုင်တော့ဘဲ လက်လျှော့ချင်နေတယ်", 
+        advice: "နီးနေပါပြီ၊ အဆုံးထိ ဇွဲမလျှော့ဘဲ ရင်ဆိုင်လိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w09.jpg" 
+    },
+    { 
+        name: "Ten of Wands", 
+        upright: "တာဝန်တွေ များလွန်းလို့ ဝန်ထုပ်ဝန်ပိုးဖြစ်ပြီး ပင်ပန်းနေရတယ်", 
+        reversed: "ဝန်ထုတ်ဝန်ပိုးတွေ လျှော့ချနိုင်တော့မယ်၊ ပေါ့ပါးသွားမယ်", 
+        advice: "အရာရာကို တစ်ယောက်တည်း မထမ်းပါနဲ့၊ အကူအညီ တောင်းခံပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w10.jpg" 
+    },
+    { 
+        name: "Page of Wands", 
+        upright: "စိတ်အားထက်သန်စရာ သတင်းကောင်း ဒါမှမဟုတ် စိတ်ကူးသစ် ရလိမ့်မယ်", 
+        reversed: "သတင်းဆိုး ကြားရနိုင်တယ်၊ အစီအစဉ်တွေ ပျက်ပြယ်နိုင်တယ်", 
+        advice: "စိတ်ကူးသစ်တွေကို စမ်းသပ်ကြည့်ဖို့ မတွန့်ဆုတ်ပါနဲ့", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w11.jpg" 
+    },
+    { 
+        name: "Knight of Wands", 
+        upright: "တက်ကြွဇွဲရှိစွာနဲ ပန်းတိုင်ကို အမြန်သွားနေတယ်", 
+        reversed: "မဆင်မခြင် စိုက်ထုတ်မိလို့ အမှားအယွင်း ဖြစ်နိုင်တယ်", 
+        advice: "ရည်မှန်းချက်ဆီ မြန်မြန်သွားပါ၊ သို့သော် သတိထားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w12.jpg" 
+    },
+    { 
+        name: "Queen of Wands", 
+        upright: "ယုံကြည်မှုအပြည့်နဲ့ စွဲဆောင်မှုရှိတဲ့ ခေါင်းဆောင်တစ်ယောက် ဖြစ်နေတယ်", 
+        reversed: "စိတ်တိုလွယ်ပြီး ဒေါသရှေ့ထားမိလို့ ပြဿနာဖြစ်နိုင်တယ်", 
+        advice: "မိမိကိုယ်ကို ယုံကြည်မှုအပြည့်နဲ့ အလုပ်လုပ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w13.jpg" 
+    },
+    { 
+        name: "King of Wands", 
+        upright: "ခေါင်းဆောင်စွမ်းရည် ပြည့်ဝပြီး အောင်မြင်မှုတွေ ရရှိလိမ့်မယ်", 
+        reversed: "အာဏာရှင်ဆန်လွန်းလို့ ဘေးလူတွေ စိတ်ညှစ်ရနိုင်တယ်", 
+        advice: "ခေါင်းဆောင်ကောင်း ပီသစွာ ဆုံးဖြတ်ချက်များ ချပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/w14.jpg" 
+    },
 
     // --- MINOR ARCANA: CUPS ---
-    { name: "Ace of Cups", upright: "ချစ်ခြင်းမေတ္တာ၊ အစသစ်", reversed: "စိတ်ဒဏ်ရာ", advice: "နှလုံးသားကို ဖွင့်ဟထားပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c01.jpg" },
-    { name: "Two of Cups", upright: "သဟဇာတဖြစ်ခြင်း၊ မိတ်ဆွေကောင်း", reversed: "နားလည်မှုလွဲခြင်း", advice: "အချင်းချင်း နားလည်မှုတည်ဆောက်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c02.jpg" },
-    { name: "Three of Cups", upright: "အောင်ပွဲခံခြင်း၊ ပျော်ရွှင်ရခြင်း", reversed: "အထီးကျန်ခြင်း", advice: "ချစ်ခင်ရသူများနှင့် အချိန်ပေးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c03.jpg" },
-    { name: "Four of Cups", upright: "ငြီးငွေ့ခြင်း", reversed: "နိုးထလာခြင်း", advice: "ဘေးပတ်ဝန်းကျင်ကို သတိထားကြည့်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c04.jpg" },
-    { name: "Five of Cups", upright: "ဝမ်းနည်းခြင်း၊ ဆုံးရှုံးမှု", reversed: "အတိတ်မှ ရုန်းထွက်နိုင်ခြင်း", advice: "ကျန်ရှိနေသော အကောင်းဘက်ကို ကြည့်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c05.jpg" },
-    { name: "Six of Cups", upright: "အတိတ်၏ အမှတ်တရ", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "အပြုသဘောဆောင်သော အမှတ်တရများကို သတိရပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c06.jpg" },
-    { name: "Seven of Cups", upright: "စိတ်ကူးယဉ်ခြင်း", reversed: "အမှန်တရားကို မြင်လာခြင်း", advice: "လက်တွေ့ကျသော အရာကို ရွေးချယ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c07.jpg" },
-    { name: "Eight of Cups", upright: "စွန့်ခွာခြင်း", reversed: "တွန့်ဆုတ်နေခြင်း", advice: "မလိုအပ်တော့သော အရာများကို စွန့်လွှတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c08.jpg" },
-    { name: "Nine of Cups", upright: "ဆန္ဒပြည့်ဝခြင်း", reversed: "အတ္တကြီးခြင်း", advice: "ရရှိထားသော အရာများအပေါ် ကျေနပ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c09.jpg" },
-    { name: "Ten of Cups", upright: "မိသားစု ပျော်ရွှင်မှု", reversed: "မိသားစု အဆင်မပြေမှု", advice: "မိသားစုနှင့် အချစ်ကို ဦးစားပေးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c10.jpg" },
-    { name: "Page of Cups", upright: "သတင်းကောင်း၊ စိတ်ကူး", reversed: "စိတ်ခံစားချက် မတည်ငြိမ်ခြင်း", advice: "နူးညံ့သော စိတ်ဓာတ်ဖြင့် ရင်ဆိုင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c11.jpg" },
-    { name: "Knight of Cups", upright: "အချစ်ကမ်းလှမ်းမှု", reversed: "စိတ်ကူးယဉ်လွန်ခြင်း", advice: "နှလုံးသား၏ ခေါ်ဆောင်ရာသို့ လိုက်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c12.jpg" },
-    { name: "Queen of Cups", upright: "ကြင်နာမှု၊ ပင်ကိုအသိ", reversed: "စိတ်ခံစားချက် လွန်ကဲခြင်း", advice: "စာနာနားလည်မှုပေးပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c13.jpg" },
-    { name: "King of Cups", upright: "စိတ်ဓာတ် တည်ငြိမ်မှု", reversed: "စိတ်ခံစားချက် ကမောက်ကမဖြစ်ခြင်း", advice: "စိတ်အေးအေးထားပြီး ထိန်းချုပ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c14.jpg" },
+    { 
+        name: "Ace of Cups", 
+        upright: "ချစ်ခြင်းမေတ္တာနဲ ပျော်ရွှင်မှု သစ်တွေ စတင်တော့မယ်", 
+        reversed: "စိတ်ဒဏ်ရာ ရထားလို့ နှလုံးသားကို ပိတ်ပင်ထားမိတယ်", 
+        advice: "နှလုံးသားကို ဖွင့်ဟထားပါ၊ ချစ်ခြင်းတွေကို လက်ခံလိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c01.jpg" 
+    },
+    { 
+        name: "Two of Cups", 
+        upright: "နားလည်မှုရှိတဲ့ မိတ်ဆွေ သို့မဟုတ် ချစ်သူ ရရှိလိမ့်မယ်", 
+        reversed: "နားလည်မှုလွဲပြီး သဘောထား ကွဲလွဲနေရတယ်", 
+        advice: "အချင်းချင်း မျှမျှတတ နားလည်မှု တည်ဆောက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c02.jpg" 
+    },
+    { 
+        name: "Three of Cups", 
+        upright: "သူငယ်ချင်းတွေနဲ့အတူ ပျော်ရွှင်စွာ အောင်ပွဲခံရလိမ့်မယ်", 
+        reversed: "အဖွဲ့ထဲမှာ အထီးကျန်သလို ခံစားရမယ်", 
+        advice: "ချစ်ခင်ရသူတွေနဲ့ အချိန်ပေးပြီး ပျော်ရွှင်မှုကို မျှဝေပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c03.jpg" 
+    },
+    { 
+        name: "Four of Cups", 
+        upright: "ရှိပြီးသားကို မကျေနပ်ဘဲ ငြီးငွေ့နေတယ်၊ အခွင့်အလမ်းတွေကို မမြင်ဘဲ ဖြစ်နေတယ်", 
+        reversed: "ငြီးငွေ့မှုကနေ သတိဝင်လာပြီး အခွင့်အလမ်းသစ်ကို မြင်လာပြီ", 
+        advice: "ဘေးပတ်ဝန်းကျင်က အခွင့်အလမ်းတွေကို သတိထားကြည့်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c04.jpg" 
+    },
+    { 
+        name: "Five of Cups", 
+        upright: "ဆုံးရှုံးမှုတစ်ခုကြောင့် ဝမ်းနည်းစိတ်ပျက်နေရတယ်", 
+        reversed: "အတိတ်က ဆုံးရှုံးမှုကို မေ့ပစ်ပြီး ရှေ့ဆက်ရုန်းထွက်နိုင်ပြီ", 
+        advice: "ဆုံးရှုံးသွားတာထက် ကျန်ရှိနေသေးတဲ့ အကောင်းဘက်ကို ကြည့်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c05.jpg" 
+    },
+    { 
+        name: "Six of Cups", 
+        upright: "အတိတ်က မိတ်ဆွေဟောင်းတွေနဲ့ ပြန်ဆုံရမယ်၊ အမှတ်တရကောင်းတွေ ကြားရမယ်", 
+        reversed: "အတိတ်မှာ ပိတ်မိနေပြီး ရှေ့မတိုးနိုင်ဘဲ ဖြစ်နေတယ်", 
+        advice: "အတိတ်က အမှတ်တရကောင်းတွေကို ခွန်အားယူပြီး ရှေ့ဆက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c06.jpg" 
+    },
+    { 
+        name: "Seven of Cups", 
+        upright: "ရွေးချယ်စရာတွေ များပြီး စိတ်ကူးယဉ်နေရတယ်၊ အမှန်မသိဖြစ်နေတယ်", 
+        reversed: "စိတ်ကူးယဉ်မနေတော့ဘဲ လက်တွေ့ကျကျ စဉ်းစားလာနိုင်ပြီ", 
+        advice: "စိတ်ကူးမယဉ်ပါနဲ့၊ လက်တွေ့ကျကျ အကျိုးရှိမယ့်အရာကို ရွေးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c07.jpg" 
+    },
+    { 
+        name: "Eight of Cups", 
+        upright: "အဆင်မပြေတော့တဲ့ အခြေအနေတစ်ခုကနေ စွန့်ခွာရတော့မယ်", 
+        reversed: "မကောင်းမှန်းသိပေမဲ့ စွန့်ခွာဖို့ တွန့်ဆုတ်နေမိတယ်", 
+        advice: "ကိုယ့်အတွက် မလိုအပ်တော့တဲ့ အရာတွေကို ရဲရဲစွန့်လွှတ်လိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c08.jpg" 
+    },
+    { 
+        name: "Nine of Cups", 
+        upright: "လိုချင်တဲ့ ဆန္ဒတွေ ပြည့်ဝပြီး စိတ်ချမ်းသာရလိမ့်မယ်", 
+        reversed: "လိုချင်တာရပေမဲ့ စိတ်ထဲ တစ်ခုခု လိုအပ်နေသလို ခံစားရမယ်", 
+        advice: "ခုရထားတဲ့ အရာတွေအပေါ် ကျေနပ်ရောင့်ရဲပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c09.jpg" 
+    },
+    { 
+        name: "Ten of Cups", 
+        upright: "မိသားစုနဲ့ ချစ်သူကြား သာယာဝပြောပြီး အင်မတန် ပျော်ရွှင်ရလိမ့်မယ်", 
+        reversed: "မိသားစု သို့မဟုတ် အချစ်ရေးမှာ အဆင်မပြေမှုလေးတွေ ရှိနေမယ်", 
+        advice: "မိသားစုနဲ့ ချစ်ခင်ရသူတွေကို မေတ္တာပေးပြီး ဦးစားပေးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c10.jpg" 
+    },
+    { 
+        name: "Page of Cups", 
+        upright: "စိတ်လှုပ်ရှားစရာ သတင်းကောင်း ဒါမှမဟုတ် ချစ်ခြင်းမေတ္တာ ကမ်းလှမ်းမှု ရမယ်", 
+        reversed: "စိတ်ခံစားချက် မတည်ငြိမ်ဘဲ ကလေးဆန်နေမိတယ်", 
+        advice: "နူးညံ့တဲ့ စိတ်ဓာတ်နဲ့ အရာရာကို ရင်ဆိုင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c11.jpg" 
+    },
+    { 
+        name: "Knight of Cups", 
+        upright: "အချစ် သို့မဟုတ် အခွင့်အလမ်းကောင်းတစ်ခု ကမ်းလှမ်းခံရလိမ့်မယ်", 
+        reversed: "စိတ်ကူးယဉ်လွန်းပြီး လက်တွေ့မကျတဲ့ ကမ်းလှမ်းမှုဖြစ်နိုင်တယ်", 
+        advice: "နှလုံးသား ခေါ်ဆောင်ရာနောက်ကို လက်တွေ့ကျကျ လိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c12.jpg" 
+    },
+    { 
+        name: "Queen of Cups", 
+        upright: "စာနာနားလည်မှု ရှိပြီး စိတ်အေးချမ်းမှုကို ပေးနိုင်လိမ့်မယ်", 
+        reversed: "စိတ်ခံစားချက် လွန်ကဲပြီး အစွန်ရောက်နေမိတယ်", 
+        advice: "သူတစ်ပါးကို စာနာနားလည်ပေးပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c13.jpg" 
+    },
+    { 
+        name: "King of Cups", 
+        upright: "စိတ်ခံစားချက်ကို သေချာ ထိန်းချုပ်နိုင်ပြီး တည်ငြိမ်မှု ရလိမ့်မယ်", 
+        reversed: "စိတ်ခံစားချက် ကမောက်ကမဖြစ်ပြီး စိတ္တဇဖြစ်နေရတယ်", 
+        advice: "စိတ်အေးအေးထားပြီး ရင့်ကျက်စွာ ထိန်းချုပ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/c14.jpg" 
+    },
 
     // --- MINOR ARCANA: SWORDS ---
-    { name: "Ace of Swords", upright: "အမှန်တရား၊ အနိုင်ရခြင်း", reversed: "ဇဝေဇဝါဖြစ်ခြင်း", advice: "ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s01.jpg" },
-    { name: "Two of Swords", upright: "ဆုံးဖြတ်ရခက်ခြင်း", reversed: "အမှန်တရားကို လက်ခံရခြင်း", advice: "သတ္တိရှိရှိ ဆုံးဖြတ်ချက်ချပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s02.jpg" },
-    { name: "Three of Swords", upright: "နှလုံးသားထိခိုက်ရခြင်း", reversed: "စိတ်ဒဏ်ရာ သက်သာလာခြင်း", advice: "အချိန်ပေး၍ စိတ်ဒဏ်ရာကို ကုစားပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s03.jpg" },
-    { name: "Four of Swords", upright: "နားနေခြင်း၊ စိတ်အေးချမ်းမှု", reversed: "ပြန်လည်နိုးထလာခြင်း", advice: "ခဏတာ အနားယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s04.jpg" },
-    { name: "Five of Swords", upright: "ပဋိပက္ခ၊ ဆုံးရှုံးရခြင်း", reversed: "ကျေအေးခြင်း", advice: "မလိုအပ်သော တိုက်ပွဲများကို ရှောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s05.jpg" },
-    { name: "Six of Swords", upright: "ခက်ခဲချိန်မှ လွတ်မြောက်ခြင်း", reversed: "အတိတ်တွင် ပိတ်မိနေခြင်း", advice: "ရှေ့ဆက်သွားရန် အချိန်တန်ပြီ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s06.jpg" },
-    { name: "Seven of Swords", upright: "လှည့်ဖြားမှု၊ တိတ်တဆိတ်လုပ်ခြင်း", reversed: "အမှန်တရား ပေါ်ပေါက်ခြင်း", advice: "သတိထားပြီး စိစစ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s07.jpg" },
-    { name: "Eight of Swords", upright: "ပိတ်မိနေခြင်း", reversed: "လွတ်မြောက်ခြင်း", advice: "မိမိကိုယ်ကို ပိတ်လှောင်မထားပါနဲ့", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s08.jpg" },
-    { name: "Nine of Swords", upright: "စိုးရိမ်လွန်ခြင်း၊ စိတ်ဖိစီးမှု", reversed: "စိုးရိမ်မှုများ လျှော့ပါးသွားခြင်း", advice: "အကြောက်တရားကို ရင်ဆိုင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s09.jpg" },
-    { name: "Ten of Swords", upright: "အဆုံးသတ်၊ နာကျင်မှု", reversed: "ပြန်လည် ထူထောင်လာခြင်း", advice: "အသစ်ပြန်စပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s10.jpg" },
-    { name: "Page of Swords", upright: "စိစစ်လေ့လာခြင်း", reversed: "အတင်းအဖျင်း", advice: "သတင်းအချက်အလက် စုဆောင်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s11.jpg" },
-    { name: "Knight of Swords", upright: "မြန်ဆန်စွာ လုပ်ဆောင်ခြင်း", reversed: "မဆင်မခြင် စိုက်ထုတ်ခြင်း", advice: "ဦးနှောက်နှင့် အကြံအစည်ပါတွဲပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s12.jpg" },
-    { name: "Queen of Swords", upright: "ပြတ်သားမှု၊ ဉာဏ်ပညာ", reversed: "စိတ်ခံစားချက်မဲ့ခြင်း", advice: "ဉာဏ်ပညာနှင့် ပြတ်သားစွာ ဆုံးဖြတ်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s13.jpg" },
-    { name: "King of Swords", upright: "ဉာဏ်ပညာကြီးမားခြင်း", reversed: "အာဏာအလွဲသုံးစားလုပ်ခြင်း", advice: "ယုတ္တိဗေဒကို အသုံးပြုပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s14.jpg" },
+    { 
+        name: "Ace of Swords", 
+        upright: "အမှန်တရားကို သိမြင်ပြီး ရှင်းရှင်းလင်းလင်း ဆုံးဖြတ်နိုင်တော့မယ်", 
+        reversed: "ဇဝေဇဝါ ဖြစ်နေတယ်၊ အမှားအယွင်း ဆုံးဖြတ်မိနိုင်တယ်", 
+        advice: "ဝေဒနာမပါဘဲ ဦးနှောက်နဲ့ ပြတ်သားစွာ ဆုံးဖြတ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s01.jpg" 
+    },
+    { 
+        name: "Two of Swords", 
+        upright: "လမ်းနှစ်ခွမှာ ဘာရွေးရမှန်းမသိ ဆုံးဖြတ်ရခက်နေတယ်", 
+        reversed: "အမှန်တရားကို လက်ခံရတော့မယ့် အချိန် ရောက်ပြီ", 
+        advice: "မျက်စိမှိတ်မထားပါနဲ့၊ သတ္တိရှိရှိ ဆုံးဖြတ်ချက်ချပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s02.jpg" 
+    },
+    { 
+        name: "Three of Swords", 
+        upright: "စကားများရခြင်း၊ စိတ်ဒဏ်ရာရခြင်း သို့မဟုတ် ဝမ်းနည်းရခြင်း ကြုံရမယ်", 
+        reversed: "စိတ်ဒဏ်ရာတွေ သက်သာလာပြီး ပြန်လည် ကုစားနိုင်ပြီ", 
+        advice: "နာကျင်မှုကို အချိန်ပေးပြီး ဖြည်းဖြည်းချင်း ကုစားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s03.jpg" 
+    },
+    { 
+        name: "Four of Swords", 
+        upright: "အနားယူရမယ့် အချိန်ပါ၊ စိတ်ရော ခန္ဓာပါ ခန့်မှန်းခြေ နားလိုက်ပါ", 
+        reversed: "နားနေတာ တော်လောက်ပြီ၊ ပြန်လည် နိုးထလှုပ်ရှားရတော့မယ်", 
+        advice: "စိတ်ဖိစီးမှုတွေကို ခဏမေ့ပြီး အနားယူလိုက်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s04.jpg" 
+    },
+    { 
+        name: "Five of Swords", 
+        upright: "ပဋိပက္ခဖြစ်ပြီး နှစ်ဦးနှစ်ဖက် နစ်နာရလိမ့်မယ်", 
+        reversed: "အငြင်းပွားမှုတွေ ကျေအေးသွားကြပြီ", 
+        advice: "မလိုအပ်တဲ့ အနိုင်ရလိုစိတ်နဲ့ တိုက်ပွဲတွေကို ရှောင်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s05.jpg" 
+    },
+    { 
+        name: "Six of Swords", 
+        upright: "ခက်ခဲတဲ့ အခြေအနေကနေ အဆင်ပြေမယ့် ဘက်ကို ကူးပြောင်းနေပြီ", 
+        reversed: "အတိတ်က ပြဿနာတွေဆီ ပြန်လည် ပိတ်မိနေတယ်", 
+        advice: "အဆင်ပြေတော့မှာမို့ ရှေ့ဆက်သွားဖို့ဘဲ စဉ်းစားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s06.jpg" 
+    },
+    { 
+        name: "Seven of Swords", 
+        upright: "မရိုးမသား လုပ်ခံရနိုင်တယ်၊ သတိထားဖို့ လိုတယ်", 
+        reversed: "အမှန်တရား ပေါ်ပေါက်သွားပြီး လှည့်ကွက်တွေ ပေါ်သွားပြီ", 
+        advice: "သူများကို ကောက်ကျစ်တာမျိုး မလုပ်ပါနဲ့၊ သတိနဲ နေပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s07.jpg" 
+    },
+    { 
+        name: "Eight of Swords", 
+        upright: "ကိုယ့်အတွေးနဲ ကိုယ် ပိတ်မိနေတယ်၊ ထွက်ပေါက် မရှိသလို ခံစားရမယ်", 
+        reversed: "အတွေးဆိုးတွေကနေ လွတ်မြောက်လာပြီ", 
+        advice: "မျက်စိကို ဖွင့်ကြည့်ပါ၊ ထွက်ပေါက်က ရှိပြီးသားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s08.jpg" 
+    },
+    { 
+        name: "Nine of Swords", 
+        upright: "စိုးရိမ်လွန်ပြီး ညဘက် အိပ်မပျော်နိုင်အောင် စိတ်ဖိစီးနေရတယ်", 
+        reversed: "စိုးရိမ်မှုတွေ လျှော့ပါးသွားပြီး စိတ်သက်သာရာ ရလာမယ်", 
+        advice: "အတွေးလွန်ပြီး မကြောက်ပါနဲ့၊ လက်တွေ့မှာ ထိသလောက် မဆိုးပါဘူး", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s09.jpg" 
+    },
+    { 
+        name: "Ten of Swords", 
+        upright: "အဆိုးဆုံး အခြေအနေ အဆုံးသတ်သွားပြီ၊ အောက်ဆုံးကို ရောက်သွားတာပါ", 
+        reversed: "ဒဏ်ရာတွေကနေ ပြန်လည် ရုန်းထလာနေပြီ", 
+        advice: "ဒါ အောက်ဆုံးမို့လို့ နောက်ပိုင်း ပိုကောင်းလာဖို့ပဲ ရှိတော့တယ်", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s10.jpg" 
+    },
+    { 
+        name: "Page of Swords", 
+        upright: "သတင်းအချက်အလက် စုဆောင်းနေတယ်၊ စိစစ်လေ့လာဖို့ လိုအပ်တယ်", 
+        reversed: "အတင်းအဖျင်းတွေနဲ အလိမ်အညာ သတင်းတွေ ကြားရနိုင်တယ်", 
+        advice: "အလောမကြီးဘဲ သတင်းအချက်အလက် သေချာ စုဆောင်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s11.jpg" 
+    },
+    { 
+        name: "Knight of Swords", 
+        upright: "ပြတ်သားစွာနဲ့ အရှိန်အဟုန်မြှင့် လုပ်ဆောင်နေတယ်", 
+        reversed: "မဆင်မခြင် စိုက်ထုတ်မိလို့ စကားမှား၊ အလုပ်မှား ဖြစ်နိုင်တယ်", 
+        advice: "ဉာဏ်ကို အခြေခံပြီး စဉ်းစားပြီးမှ အရှိန်နဲ့ သွားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s12.jpg" 
+    },
+    { 
+        name: "Queen of Swords", 
+        upright: "ပြတ်သားတယ်၊ ဉာဏ်ပညာရှိတယ်၊ အမှန်တရားကိုပဲ အလေးထားတယ်", 
+        reversed: "စိတ်ခံစားချက် မရှိသလို ရက်စက်လွန်းနေတယ်", 
+        advice: "ဉာဏ်ပညာနဲ တရားမျှတမှုကို သုံးပြီး ဆုံးဖြတ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s13.jpg" 
+    },
+    { 
+        name: "King of Swords", 
+        upright: "သြဇာအာဏာရှိပြီး ယုတ္တိဗေဒကျကျ ဆုံးဖြတ်နိုင်တယ်", 
+        reversed: "အာဏာကို အလွဲသုံးစားလုပ်ပြီး စိတ်ကြီးဝင်နေတယ်", 
+        advice: "စိတ်အေးအေးထားပြီး ယုတ္တိဗေဒကျကျ သုံးသပ်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/s14.jpg" 
+    },
 
     // --- MINOR ARCANA: PENTACLES ---
-    { name: "Ace of Pentacles", upright: "ငွေကြေး အခွင့်အလမ်း", reversed: "အခွင့်အလမ်း ဆုံးရှုံးခြင်း", advice: "ငွေကြေး အခွင့်အလမ်းကို မလွတ်ပါစေနဲ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p01.jpg" },
-    { name: "Two of Pentacles", upright: "ဟန်ချက်ထိန်းခြင်း", reversed: "ဟန်ချက်ပျက်ခြင်း", advice: "အချိန်နှင့် ငွေကြေးကို စနစ်တကျ ထိန်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p02.jpg" },
-    { name: "Three of Pentacles", upright: "အဖွဲ့လိုက် လုပ်ဆောင်ခြင်း", reversed: "ပူးပေါင်းဆောင်ရွက်မှု မရှိခြင်း", advice: "အခြားသူများနှင့် ပူးပေါင်းလုပ်ဆောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p03.jpg" },
-    { name: "Four of Pentacles", upright: "ငွေကြေး စုဆောင်းခြင်း", reversed: "သုံးစွဲလွန်းခြင်း", advice: "ငွေကြေး တည်ငြိမ်အောင် ထိန်းသိမ်းပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p04.jpg" },
-    { name: "Five of Pentacles", upright: "ငွေကြေး အခက်အခဲ", reversed: "အခက်အခဲမှ လွတ်မြောက်ခြင်း", advice: "အကူအညီ တောင်းခံရန် မရှက်ပါနှင့်", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p05.jpg" },
-    { name: "Six of Pentacles", upright: "မျှဝေခြင်း၊ လှူဒါန်းခြင်း", reversed: "အမြတ်ထုတ်ခံရခြင်း", advice: "အပြန်အလှန် ကူညီဖေးမပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p06.jpg" },
-    { name: "Seven of Pentacles", upright: "အသီးအပွင့် ခံစားရခြင်း", reversed: "ကြိုးစားမှု အလကားဖြစ်ခြင်း", advice: "စိတ်ရှည်စွာ စောင့်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p07.jpg" },
-    { name: "Eight of Pentacles", upright: "ကြိုးစားအားထုတ်ခြင်း", reversed: "ပျင်းရိခြင်း", advice: "မိမိကျွမ်းကျင်မှုကို ပိုမိုမြှင့်တင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p08.jpg" },
-    { name: "Nine of Pentacles", upright: "ကြွယ်ဝချမ်းသာမှု", reversed: "ငွေကြေး မှီခိုရခြင်း", advice: "မိမိ အောင်မြင်မှုကို ဂုဏ်ယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p09.jpg" },
-    { name: "Ten of Pentacles", upright: "မိသားစု ကြွယ်ဝမှု", reversed: "မိသားစု ငွေကြေး ပြဿနာ", advice: "ရေရှည် တည်ငြိမ်မှုကို တည်ဆောက်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p10.jpg" },
-    { name: "Page of Pentacles", upright: "သင်ယူလိုစိတ်၊ ငွေကြေး သတင်းကောင်း", reversed: "အခွင့်အလမ်း လွတ်သွားခြင်း", advice: "ပညာ သို့မဟုတ် စီးပွားရေးသစ် သင်ယူပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p11.jpg" },
-    { name: "Knight of Pentacles", upright: "ဇွဲရှိခြင်း၊ တာဝန်ကျေခြင်း", reversed: "ပျင်းရိခြင်း", advice: "ဖြည်းဖြည်းနှင့် မှန်မှန် ကြိုးစားပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p12.jpg" },
-    { name: "Queen of Pentacles", upright: "ကြွယ်ဝမှု၊ စိစစ်ခန့်ခွဲနိုင်မှု", reversed: "ငွေကြေး ပူပန်လွန်းခြင်း", advice: "လက်တွေ့ကျကျ စိစစ်စီမံပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p13.jpg" },
-    { name: "King of Pentacles", upright: "စီးပွားရေး အောင်မြင်မှု", reversed: "လောဘကြီးခြင်း", advice: "စီးပွားရေးကို တည်ငြိမ်စွာ ဦးဆောင်ပါ", image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p14.jpg" }
+    { 
+        name: "Ace of Pentacles", 
+        upright: "ငွေကြေး သို့မဟုတ် စီးပွားရေး အခွင့်အလမ်းကောင်း စတင်ရရှိလိမ့်မယ်", 
+        reversed: "အခွင့်အလမ်းကောင်း လွတ်သွားနိုင်တယ်၊ စီမံကိန်း မှားနိုင်တယ်", 
+        advice: "ရောက်လာတဲ့ ငွေကြေး အခွင့်အလမ်းကို မလွတ်ပါစေနဲ့", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p01.jpg" 
+    },
+    { 
+        name: "Two of Pentacles", 
+        upright: "ငွေကြေးနဲ အချိန်ကို အဆင်ပြေအောင် ဟန်ချက်ထိန်းနေရတယ်", 
+        reversed: "ဟန်ချက်ပျက်ပြီး စီမံခန့်ခွဲမှု လွဲနေတယ်", 
+        advice: "ဝင်ငွေထွက်ငွေနဲ့ အချိန်ကို စနစ်တကျ ထိန်းညှိပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p02.jpg" 
+    },
+    { 
+        name: "Three of Pentacles", 
+        upright: "အဖွဲ့လိုက် ပူးပေါင်းဆောင်ရွက်မှု ကောင်းမွန်ပြီး အောင်မြင်မယ်", 
+        reversed: "ပူးပေါင်းဆောင်ရွက်မှု မရှိဘဲ အဆင်မပြေ ဖြစ်နေတယ်", 
+        advice: "အခြားသူတွေရဲ့ ကျွမ်းကျင်မှုကို အသုံးချပြီး ပူးပေါင်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p03.jpg" 
+    },
+    { 
+        name: "Four of Pentacles", 
+        upright: "ငွေကြေး တည်ငြိမ်အောင် စုဆောင်းနိုင်တယ်၊ ဒါပေမဲ့ ကပ်စေးနည်းမိနိုင်တယ်", 
+        reversed: "ငွေကြေး စီမံမှု လွဲပြီး သုံးစွဲလွန်းနေတယ်", 
+        advice: "ငွေကြေး တည်ငြိမ်အောင် ထိန်းထားပါ၊ သို့သော် လောဘမကြီးပါနဲ့", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p04.jpg" 
+    },
+    { 
+        name: "Five of Pentacles", 
+        upright: "ငွေကြေး အခက်အခဲ သို့မဟုတ် အကူအညီမဲ့သလို ခံစားရမယ်", 
+        reversed: "ဒုက္ခတွေကနေ လွတ်မြောက်ပြီး အဆင်ပြေလာတော့မယ်", 
+        advice: "အကူအညီ လိုရင် တောင်းဖို့ မရှက်ပါနဲ့၊ ကူညီမယ့်သူ ရှိပါတယ်", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p05.jpg" 
+    },
+    { 
+        name: "Six of Pentacles", 
+        upright: "မျှဝေခြင်း၊ လှူဒါန်းခြင်းနဲ အကူအညီ ရရှိခြင်းတွေ ကြုံရမယ်", 
+        reversed: "အမြတ်ထုတ်ခံရခြင်း သို့မဟုတ် မမျှတမှုတွေ ကြုံရနိုင်တယ်", 
+        advice: "နိုင်သလောက် ကူညီပါ၊ အပြန်အလှန် ဖေးမပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p06.jpg" 
+    },
+    { 
+        name: "Seven of Pentacles", 
+        upright: "စိုက်ပျိုးထားတာတွေ ရိတ်သိမ်းရတော့မယ်၊ အသီးအပွင့် ခံစားရမယ်", 
+        reversed: "ကြိုးစားထားတာတွေ အဖတ်မတင်ဘဲ စိတ်ပျက်ရနိုင်တယ်", 
+        advice: "အသီးအပွင့် ရဖို့ စိတ်ရှည်ရှည် စောင့်ဆိုင်းပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p07.jpg" 
+    },
+    { 
+        name: "Eight of Pentacles", 
+        upright: "ကြိုးစားအားထုတ်ပြီး ကျွမ်းကျင်မှုတွေကို မြှင့်တင်နေတယ်", 
+        reversed: "ပျင်းရိနေတယ်၊ အလုပ်မှာ အာရုံမစိုက်နိုင် ဖြစ်နေတယ်", 
+        advice: "ဇွဲရှိရှိနဲ့ ကိုယ့်ကျွမ်းကျင်မှုကို ပိုမို လေ့ကျင့်ပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p08.jpg" 
+    },
+    { 
+        name: "Nine of Pentacles", 
+        upright: "ကိုယ့်ခြေထောက်ပေါ် ကိုယ်ရပ်တည်နိုင်ပြီး ကြွယ်ဝ ချမ်းသာမှုကို ခံစားရမယ်", 
+        reversed: "သူများအပေါ် မှီခိုနေရတယ်၊ ငွေကြေး မတည်ငြိမ်ဘူး", 
+        advice: "ကိုယ့်ရဲ့ အောင်မြင်မှုနဲ့ လွတ်လပ်မှုကို ဂုဏ်ယူပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p09.jpg" 
+    },
+    { 
+        name: "Ten of Pentacles", 
+        upright: "မိသားစုအလိုက် ကြွယ်ဝချမ်းသာပြီး ရေရှည် တည်ငြိမ်မှု ရရှိမယ်", 
+        reversed: "မိသားစု အမွေပြဿနာ သို့မဟုတ် ငွေကြေး ဆုံးရှုံးမှု ဖြစ်နိုင်တယ်", 
+        advice: "ရေရှည် တည်ငြိမ်မှုနဲ့ မိသားစု အကျိုးကို ရှေးရှုပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p10.jpg" 
+    },
+    { 
+        name: "Page of Pentacles", 
+        upright: "ငွေကြေး သတင်းကောင်း ရမယ်၊ ပညာသစ် သင်ယူဖို့ အခွင့်အလမ်း ရမယ်", 
+        reversed: "အခွင့်အလမ်းကောင်း ပျောက်ဆုံးသွားနိုင်တယ်", 
+        advice: "လက်တွေ့ကျတဲ့ စီးပွားရေးနဲ ပညာရပ်တွေကို လေ့လာပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p11.jpg" 
+    },
+    { 
+        name: "Knight of Pentacles", 
+        upright: "ဇွဲရှိရှိနဲ တာဝန်ကျေစွာ မှန်မှန် လုပ်ဆောင်နေတယ်", 
+        reversed: "ပျင်းရိလွန်းတယ်၊ ပျင်းရိမှုကြောင့် အလုပ်မဖြစ်ဘူး", 
+        advice: "ဖြည်းဖြည်းနဲ မှန်မှန် ကြိုးစားသွားပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p12.jpg" 
+    },
+    { 
+        name: "Queen of Pentacles", 
+        upright: "လက်တွေ့ကျကျ စိစစ် စီမံနိုင်ပြီး ပြည့်စုံ ကြွယ်ဝသူ ဖြစ်တယ်", 
+        reversed: "ငွေကြေးအတွက် ပူပန်လွန်းနေတယ်", 
+        advice: "သဘောထား ကြီးကြီးထားပြီး လက်တွေ့ကျကျ စီမံပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p13.jpg" 
+    },
+    { 
+        name: "King of Pentacles", 
+        upright: "စီးပွားရေးမှာ အလွန်အောင်မြင်ပြီး ငွေကြေး တည်ငြိမ်သူ ဖြစ်မယ်", 
+        reversed: "လောဘကြီးလွန်းလို့ ပြဿနာဖြစ်နိုင်တယ်", 
+        advice: "စီးပွားရေးကို တည်ငြိမ်စွာ ဦးဆောင် စီမံပါ", 
+        image: "https://raw.githubusercontent.com/evercoder/tarot-api/master/static/cards/p14.jpg" 
+    }
 ];
 function drawCards() {
     const userNameInput = document.getElementById("userName");
